@@ -283,7 +283,7 @@ function renderFixtures(fixtures) {
     const d = new Date(iso);
     return d.toLocaleString(undefined, {
       weekday: "short", month: "short", day: "numeric",
-      hour: "numeric", minute: "2-digit",
+      hour: "2-digit", minute: "2-digit", hour12: false,
     });
   };
   const isDone = (f) => f.status === "FINISHED";
