@@ -86,9 +86,9 @@ const STAGE_ORDER = Object.keys(STAGES);
 
 // One colour accent per player.
 const OWNER_COLORS = {
-  Mom:     "#e63972", // pink
+  Mom:     "#c026d3", // fuchsia
   Byron:   "#2563eb", // blue
-  Melissa: "#d6480b", // orange — stands out against the green pitch
+  Melissa: "#d97706", // amber — clearly distinct from the other two
 };
 
 /* ============================================================================
