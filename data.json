@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T11:56:02.549Z",
+  "lastUpdated": "2026-06-20T19:23:12.198Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -282,39 +282,39 @@
       "gd": -6,
       "points": 0
     },
-    "Sweden": {
+    "Netherlands": {
       "status": "alive",
       "reached": "group",
       "group": "F",
       "rank": 1,
-      "played": 1,
+      "played": 2,
+      "won": 1,
+      "draw": 1,
+      "lost": 0,
+      "gf": 7,
+      "ga": 3,
+      "gd": 4,
+      "points": 4
+    },
+    "Sweden": {
+      "status": "alive",
+      "reached": "group",
+      "group": "F",
+      "rank": 2,
+      "played": 2,
       "won": 1,
       "draw": 0,
-      "lost": 0,
-      "gf": 5,
-      "ga": 1,
-      "gd": 4,
+      "lost": 1,
+      "gf": 6,
+      "ga": 6,
+      "gd": 0,
       "points": 3
     },
     "Japan": {
       "status": "alive",
       "reached": "group",
       "group": "F",
-      "rank": 2,
-      "played": 1,
-      "won": 0,
-      "draw": 1,
-      "lost": 0,
-      "gf": 2,
-      "ga": 2,
-      "gd": 0,
-      "points": 1
-    },
-    "Netherlands": {
-      "status": "alive",
-      "reached": "group",
-      "group": "F",
-      "rank": 2,
+      "rank": 3,
       "played": 1,
       "won": 0,
       "draw": 1,
@@ -1002,9 +1002,9 @@
       "group": "F",
       "home": "Netherlands",
       "away": "Sweden",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 5,
+      "as": 1,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-20T20:00:00Z",
