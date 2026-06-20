@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T19:23:12.198Z",
+  "lastUpdated": "2026-06-20T22:04:40.589Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -231,27 +231,27 @@
       "reached": "group",
       "group": "E",
       "rank": 1,
-      "played": 1,
-      "won": 1,
+      "played": 2,
+      "won": 2,
       "draw": 0,
       "lost": 0,
-      "gf": 7,
-      "ga": 1,
-      "gd": 6,
-      "points": 3
+      "gf": 9,
+      "ga": 2,
+      "gd": 7,
+      "points": 6
     },
     "Ivory Coast": {
       "status": "alive",
       "reached": "group",
       "group": "E",
       "rank": 2,
-      "played": 1,
+      "played": 2,
       "won": 1,
       "draw": 0,
-      "lost": 0,
-      "gf": 1,
-      "ga": 0,
-      "gd": 1,
+      "lost": 1,
+      "gf": 2,
+      "ga": 2,
+      "gd": 0,
       "points": 3
     },
     "Ecuador": {
@@ -1012,9 +1012,9 @@
       "group": "E",
       "home": "Germany",
       "away": "Ivory Coast",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 2,
+      "as": 1,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-21T00:00:00Z",
