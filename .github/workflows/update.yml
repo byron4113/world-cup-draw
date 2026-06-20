@@ -1,0 +1,38 @@
+name: Update World Cup data
+
+on:
+  schedule:
+    # Twice a day, at 07:00 and 19:00 UTC. (GitHub cron is always UTC.)
+    - cron: "0 7,19 * * *"
+  workflow_dispatch: {} # adds a "Run workflow" button you can press any time
+
+# Let the action commit the refreshed data.json back to the repo.
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch latest results
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: node update.mjs
+
+      - name: Commit if data changed
+        run: |
+          git config user.name "wc-bot"
+          git config user.email "actions@github.com"
+          if ! git diff --quiet data.json; then
+            git add data.json
+            git commit -m "Update World Cup data ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push
+          else
+            echo "No changes."
+          fi
