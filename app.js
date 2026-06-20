@@ -86,9 +86,9 @@ const STAGE_ORDER = Object.keys(STAGES);
 
 // One colour accent per player.
 const OWNER_COLORS = {
-  Mom:     "#e0457b",
-  Byron:   "#2d8cff",
-  Melissa: "#27a981",
+  Mom:     "#e63972", // pink
+  Byron:   "#2563eb", // blue
+  Melissa: "#d6480b", // orange — stands out against the green pitch
 };
 
 /* ============================================================================
@@ -108,6 +108,8 @@ function statusFor(teamName, live) {
     rank: s.rank ?? null,             // position in group
     points: s.points ?? null,         // group points
     played: s.played ?? null,         // group games played
+    gd: s.gd ?? null,                 // goal difference
+    gf: s.gf ?? null,                 // goals for
   };
 }
 
@@ -132,6 +134,17 @@ function ordinal(n) {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 
+// Order a player's teams "best first": furthest in the tournament, then most
+// points, then goal difference / goals. Used for sorting rosters and picking
+// each player's top team.
+function bestFirst(a, b) {
+  const da = STAGE_ORDER.indexOf(a.reached), db = STAGE_ORDER.indexOf(b.reached);
+  if (db !== da) return db - da;
+  if ((b.points || 0) !== (a.points || 0)) return (b.points || 0) - (a.points || 0);
+  if ((b.gd || 0) !== (a.gd || 0)) return (b.gd || 0) - (a.gd || 0);
+  return (b.gf || 0) - (a.gf || 0);
+}
+
 function render(live) {
   const teams = TEAMS.map((t) => teamWithStatus(t, live));
   renderLeaderboard(teams, live);
@@ -144,51 +157,56 @@ function render(live) {
 function renderLeaderboard(teams, live) {
   const stats = OWNERS.map((owner) => {
     const mine = teams.filter((t) => t.owner === owner);
-    const alive = mine.filter((t) => t.status === "alive");
-    const score = mine.reduce((sum, t) => sum + STAGES[t.reached].score, 0);
-    // Deepest run among this owner's teams (alive teams count for more).
-    const deepest = mine.reduce((best, t) => {
-      const idx = STAGE_ORDER.indexOf(t.reached);
-      return idx > best.idx ? { idx, team: t } : best;
-    }, { idx: -1, team: null });
-    return { owner, total: mine.length, alive: alive.length, score, deepest };
+    const aliveTeams = mine.filter((t) => t.status === "alive");
+    const totalPoints = mine.reduce((s, t) => s + (t.points || 0), 0);
+    const totalGd = mine.reduce((s, t) => s + (t.gd || 0), 0);
+    // "Top team" = their best-placed team, preferring ones still in.
+    const pool = aliveTeams.length ? aliveTeams : mine;
+    const top = [...pool].sort(bestFirst)[0] || null;
+    return { owner, total: mine.length, alive: aliveTeams.length, totalPoints, totalGd, top };
   });
 
-  // Rank: most teams still alive wins; ties broken by depth score.
+  // Rank: most teams still in; ties broken by total points, then goal difference.
   const ranked = [...stats].sort(
-    (a, b) => b.alive - a.alive || b.score - a.score
+    (a, b) => b.alive - a.alive || b.totalPoints - a.totalPoints || b.totalGd - a.totalGd
   );
-  const leader = ranked[0];
-  const isTie = ranked.filter((r) => r.alive === leader.alive && r.score === leader.score).length > 1;
 
   const championOwner = live.champion
     ? (TEAMS.find((t) => t.name === live.champion) || {}).owner
     : null;
 
-  let banner;
-  if (championOwner) {
-    banner = `🏆 <strong>${championOwner}</strong> wins the family draw — ${live.champion} are World Champions!`;
-  } else if (isTie) {
-    banner = `It's neck and neck — ${leader.alive} teams each still standing.`;
-  } else {
-    banner = `<strong>${leader.owner}</strong> is ahead with <strong>${leader.alive}</strong> teams still alive.`;
+  // When the tournament is won, announce the champion above the podium.
+  const banner = $("#banner");
+  if (banner) {
+    banner.innerHTML = championOwner
+      ? `🏆 <strong>${championOwner}</strong> wins the draw — ${live.champion} are World Champions!`
+      : "";
+    banner.style.display = championOwner ? "" : "none";
   }
-  $("#banner").innerHTML = banner;
+
+  // --- Where a player's top team currently stands ---
+  const topLabel = (t) => {
+    if (!t) return "—";
+    let where;
+    if (t.status === "out") where = "out";
+    else if (t.reached === "champion") where = "🏆 champions";
+    else if (t.reached === "group")
+      where = t.group && t.rank ? `Group ${t.group}, ${ordinal(t.rank)}` : "group stage";
+    else where = `into the ${STAGES[t.reached].short}`;
+    return `${t.flag} ${t.name} <span class="top-where">${where}</span>`;
+  };
 
   $("#leaderboard").innerHTML = ranked
     .map((r, i) => {
       const medal = ["🥇", "🥈", "🥉"][i] || "";
       const champ = championOwner === r.owner;
-      const deepestLabel = r.deepest.team
-        ? `${r.deepest.team.flag} ${r.deepest.team.name} · ${STAGES[r.deepest.team.reached].short}`
-        : "—";
       return `
         <div class="podium-card ${champ ? "is-champion" : ""}" style="--accent:${OWNER_COLORS[r.owner]}">
           <div class="podium-rank">${champ ? "🏆" : medal}</div>
           <div class="podium-name">${r.owner}</div>
           <div class="podium-alive"><span class="big">${r.alive}</span><span class="lbl">still in</span></div>
-          <div class="podium-meta">of ${r.total} teams · depth score ${r.score}</div>
-          <div class="podium-deepest">Best run: ${deepestLabel}</div>
+          <div class="podium-meta">of ${r.total} teams</div>
+          <div class="podium-deepest"><span class="top-label">Top team</span>${topLabel(r.top)}</div>
         </div>`;
     })
     .join("");
@@ -198,26 +216,25 @@ function renderLeaderboard(teams, live) {
 function renderRosters(teams) {
   $("#rosters").innerHTML = OWNERS.map((owner) => {
     const mine = teams.filter((t) => t.owner === owner);
-    // Alive first, then by how far they got.
-    mine.sort((a, b) => {
-      if (a.status !== b.status) return a.status === "alive" ? -1 : 1;
-      return STAGE_ORDER.indexOf(b.reached) - STAGE_ORDER.indexOf(a.reached);
-    });
-    const aliveCount = mine.filter((t) => t.status === "alive").length;
+    // Still-in teams first (best by points/progress), then knocked-out at the bottom.
+    const aliveTeams = mine.filter((t) => t.status === "alive").sort(bestFirst);
+    const outTeams = mine.filter((t) => t.status === "out").sort(bestFirst);
+    const ordered = [...aliveTeams, ...outTeams];
+    const aliveCount = aliveTeams.length;
 
-    const chips = mine
+    const chips = ordered
       .map((t) => {
         const out = t.status === "out";
         let tag;
         if (out) {
-          tag = `out · ${STAGES[t.reached].short}`;
+          tag = "OUT"; // knocked out — drop the group/points clutter
         } else if (t.reached === "group") {
           // Still in the group stage — show live position + points if we have them.
           if (t.group && t.rank) {
             const pts = t.points != null ? ` · ${t.points} pt${t.points === 1 ? "" : "s"}` : "";
-            tag = `Grp ${t.group} · ${ordinal(t.rank)}${pts}`;
+            tag = `Group ${t.group} · ${ordinal(t.rank)}${pts}`;
           } else if (t.group) {
-            tag = `Grp ${t.group}`;
+            tag = `Group ${t.group}`;
           } else {
             tag = STAGES.group.short;
           }

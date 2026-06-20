@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T10:11:46.848Z",
+  "lastUpdated": "2026-06-20T10:38:34.670Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -702,8 +702,8 @@
       "group": "B",
       "home": "Canada",
       "away": "Bosnia",
-      "hs": 1,
-      "as": 1,
+      "hs": null,
+      "as": null,
       "status": "FINISHED"
     },
     {
