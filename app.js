@@ -316,14 +316,22 @@ function renderFixtures(fixtures) {
       </div>`;
   };
 
-  let html = "";
+  // Colour key so the owner dots/pills make sense (handy on mobile especially).
+  const legend =
+    `<div class="fx-legend">` +
+    OWNERS.map(
+      (o) => `<span class="leg"><span class="leg-dot" style="background:${OWNER_COLORS[o]}"></span>${o}</span>`
+    ).join("") +
+    `</div>`;
+
+  let html = legend;
   if (recent.length || live.length) {
     html += `<h3 class="fx-head">Recent &amp; live</h3>` + [...recent, ...live].map(row).join("");
   }
   if (upcoming.length) {
     html += `<h3 class="fx-head">Coming up</h3>` + upcoming.map(row).join("");
   }
-  wrap.innerHTML = html || `<p class="empty">No matches to show right now.</p>`;
+  wrap.innerHTML = html.trim() === legend.trim() ? `<p class="empty">No matches to show right now.</p>` : html;
 }
 
 function renderFooter(live) {
