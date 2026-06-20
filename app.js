@@ -326,7 +326,7 @@ function renderFixtures(fixtures) {
 
   let html = legend;
   if (recent.length || live.length) {
-    html += `<h3 class="fx-head">Recent &amp; live</h3>` + [...recent, ...live].map(row).join("");
+    html += `<h3 class="fx-head">Recent</h3>` + [...recent, ...live].map(row).join("");
   }
   if (upcoming.length) {
     html += `<h3 class="fx-head">Coming up</h3>` + upcoming.map(row).join("");
