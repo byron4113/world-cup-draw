@@ -10,6 +10,11 @@ on:
 permissions:
   contents: write
 
+# Never let two of these run at once (avoids push collisions).
+concurrency:
+  group: update-world-cup-data
+  cancel-in-progress: true
+
 jobs:
   update:
     runs-on: ubuntu-latest
