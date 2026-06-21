@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T18:56:00.018Z",
+  "lastUpdated": "2026-06-21T20:03:32.643Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -338,35 +338,35 @@
       "gd": -8,
       "points": 0
     },
-    "New Zealand": {
-      "status": "alive",
-      "reached": "group",
-      "group": "G",
-      "rank": 1,
-      "played": 1,
-      "won": 0,
-      "draw": 1,
-      "lost": 0,
-      "gf": 2,
-      "ga": 2,
-      "gd": 0,
-      "points": 1
-    },
     "Iran": {
       "status": "alive",
       "reached": "group",
       "group": "G",
-      "rank": 2,
-      "played": 1,
+      "rank": 1,
+      "played": 2,
       "won": 0,
-      "draw": 1,
+      "draw": 2,
       "lost": 0,
       "gf": 2,
       "ga": 2,
       "gd": 0,
-      "points": 1
+      "points": 2
     },
     "Belgium": {
+      "status": "alive",
+      "reached": "group",
+      "group": "G",
+      "rank": 2,
+      "played": 2,
+      "won": 0,
+      "draw": 2,
+      "lost": 0,
+      "gf": 1,
+      "ga": 1,
+      "gd": 0,
+      "points": 2
+    },
+    "New Zealand": {
       "status": "alive",
       "reached": "group",
       "group": "G",
@@ -375,8 +375,8 @@
       "won": 0,
       "draw": 1,
       "lost": 0,
-      "gf": 1,
-      "ga": 1,
+      "gf": 2,
+      "ga": 2,
       "gd": 0,
       "points": 1
     },
@@ -1052,9 +1052,9 @@
       "group": "G",
       "home": "Belgium",
       "away": "Iran",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 0,
+      "status": "PAUSED"
     },
     {
       "date": "2026-06-21T22:00:00Z",
