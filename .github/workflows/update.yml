@@ -2,9 +2,10 @@ name: Update World Cup data
 
 on:
   schedule:
-    # 4x daily. GitHub cron is UTC; these map to SAST (UTC+2):
-    # 01:00 UTC = 3am SAST, 05:00 = 7am, 18:00 = 8pm, 21:00 = 11pm.
-    - cron: "0 1,5,18,21 * * *"
+    # 4x daily. GitHub cron is UTC and best-effort, so we avoid the very busy
+    # top-of-hour (:00) and run at :17 to reduce delays/skips.
+    # Maps to SAST (UTC+2): 01:17 UTC ≈ 3am, 05:17 ≈ 7am, 18:17 ≈ 8pm, 21:17 ≈ 11pm.
+    - cron: "17 1,5,18,21 * * *"
   workflow_dispatch: {} # adds a "Run workflow" button you can press any time
 
 # Let the action commit the refreshed data.json back to the repo.
