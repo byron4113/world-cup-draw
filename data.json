@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T05:30:11.216Z",
+  "lastUpdated": "2026-06-21T06:04:43.856Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -305,9 +305,9 @@
       "won": 1,
       "draw": 1,
       "lost": 0,
-      "gf": 4,
+      "gf": 6,
       "ga": 2,
-      "gd": 2,
+      "gd": 4,
       "points": 4
     },
     "Sweden": {
@@ -334,8 +334,8 @@
       "draw": 0,
       "lost": 2,
       "gf": 1,
-      "ga": 7,
-      "gd": -6,
+      "ga": 9,
+      "gd": -8,
       "points": 0
     },
     "New Zealand": {
@@ -1033,8 +1033,8 @@
       "home": "Tunisia",
       "away": "Japan",
       "hs": 0,
-      "as": 2,
-      "status": "IN_PLAY"
+      "as": 4,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-21T16:00:00Z",
