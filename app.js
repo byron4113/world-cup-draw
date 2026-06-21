@@ -296,6 +296,16 @@ function renderFixtures(fixtures) {
   const upcoming = sorted.filter((f) => !isDone(f) && !isLive(f)).slice(0, 8);
   const show = [...recent, ...live, ...upcoming];
 
+  // flag + name are separate spans (each a fixed-width column) so names line up.
+  const teamCell = (name, side) => {
+    const flag = `<span class="fx-flag">${flagFor(name)}</span>`;
+    const nm = `<span class="fx-name">${name}</span>`;
+    const badge = ownerBadge(name);
+    return side === "home"
+      ? `<div class="fx-team home">${badge}${flag}${nm}</div>`
+      : `<div class="fx-team away">${nm}${flag}${badge}</div>`;
+  };
+
   const row = (f) => {
     const done = isDone(f);
     const playing = isLive(f);
@@ -310,9 +320,10 @@ function renderFixtures(fixtures) {
     return `
       <div class="fixture ${done ? "done" : ""} ${playing ? "live" : ""}">
         <div class="fx-when">${when}</div>
-        <div class="fx-team home">${ownerBadge(f.home)}<span>${flagFor(f.home)} ${f.home}</span></div>
+        ${teamCell(f.home, "home")}
         <div class="fx-mid">${mid}</div>
-        <div class="fx-team away"><span>${f.away} ${flagFor(f.away)}</span>${ownerBadge(f.away)}</div>
+        ${teamCell(f.away, "away")}
+        <div class="fx-end"></div>
       </div>`;
   };
 

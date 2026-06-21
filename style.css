@@ -151,10 +151,12 @@ main { max-width: 1000px; margin: 0 auto; padding: 0 18px 60px; }
 .fx-head { font-family: "Anton", sans-serif; font-size: 1.05rem; text-transform: uppercase; color: #fff; margin: 14px 0 6px; text-align: center; text-shadow: 1px 1px 0 rgba(0,0,0,0.3); }
 .fx-head:first-child { margin-top: 0; }
 .fixture {
-  display: grid; grid-template-columns: 92px 1fr auto 1fr; align-items: center; gap: 10px;
+  display: grid; grid-template-columns: 92px 1fr auto 1fr 92px; align-items: center; gap: 10px;
   background: var(--cream); border: 3px solid var(--ink); border-radius: 10px; padding: 9px 14px;
   box-shadow: 3px 3px 0 var(--ink);
 }
+.fx-flag { display: inline-block; width: 1.5em; text-align: center; flex: none; }
+.fx-name { white-space: nowrap; }
 .fixture.live { border-color: var(--red); box-shadow: 3px 3px 0 var(--red); }
 .fx-when { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: #6a6356; }
 .fx-team { display: flex; align-items: center; gap: 8px; font-weight: 600; }
@@ -165,7 +167,8 @@ main { max-width: 1000px; margin: 0 auto; padding: 0 18px 60px; }
 .vs { color: #6a6356; font-size: 0.8rem; font-weight: 700; }
 .live-dot { color: var(--red); font-weight: 800; }
 .who {
-  font-size: 0.6rem; font-weight: 800; color: #fff; padding: 2px 6px;
+  display: inline-block; box-sizing: border-box; width: 64px; text-align: center;
+  font-size: 0.6rem; font-weight: 800; color: #fff; padding: 2px 4px;
   border: 2px solid var(--ink); border-radius: 999px; white-space: nowrap;
 }
 
@@ -176,9 +179,10 @@ main { max-width: 1000px; margin: 0 auto; padding: 0 18px 60px; }
   .leaderboard { grid-template-columns: 1fr; }
   .rosters { grid-template-columns: 1fr; }
   .podium-card, .roster { transform: none; }
-  .fixture { grid-template-columns: 40px 1fr auto 1fr; padding: 8px 8px; gap: 5px; }
+  .fixture { grid-template-columns: 34px 1fr auto 1fr 34px; padding: 8px 6px; gap: 4px; }
   .fx-when { font-size: 0.56rem; }
-  .fx-team { font-size: 0.78rem; gap: 5px; }
+  .fx-team { font-size: 0.74rem; gap: 4px; }
+  .fx-flag { width: 1.3em; }
   .score { font-size: 1rem; }
   .vs { font-size: 0.72rem; }
   /* Pills become compact colour dots on mobile so rows stay tidy. */
