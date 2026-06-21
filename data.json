@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T04:24:08.804Z",
+  "lastUpdated": "2026-06-21T05:10:20.646Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -296,11 +296,25 @@
       "gd": 4,
       "points": 4
     },
-    "Sweden": {
+    "Japan": {
       "status": "alive",
       "reached": "group",
       "group": "F",
       "rank": 2,
+      "played": 2,
+      "won": 1,
+      "draw": 1,
+      "lost": 0,
+      "gf": 4,
+      "ga": 2,
+      "gd": 2,
+      "points": 4
+    },
+    "Sweden": {
+      "status": "alive",
+      "reached": "group",
+      "group": "F",
+      "rank": 3,
       "played": 2,
       "won": 1,
       "draw": 0,
@@ -310,20 +324,6 @@
       "gd": 0,
       "points": 3
     },
-    "Japan": {
-      "status": "alive",
-      "reached": "group",
-      "group": "F",
-      "rank": 3,
-      "played": 2,
-      "won": 0,
-      "draw": 2,
-      "lost": 0,
-      "gf": 2,
-      "ga": 2,
-      "gd": 0,
-      "points": 2
-    },
     "Tunisia": {
       "status": "alive",
       "reached": "group",
@@ -331,12 +331,12 @@
       "rank": 4,
       "played": 2,
       "won": 0,
-      "draw": 1,
-      "lost": 1,
+      "draw": 0,
+      "lost": 2,
       "gf": 1,
-      "ga": 5,
-      "gd": -4,
-      "points": 1
+      "ga": 7,
+      "gd": -6,
+      "points": 0
     },
     "New Zealand": {
       "status": "alive",
@@ -702,8 +702,8 @@
       "group": "B",
       "home": "Canada",
       "away": "Bosnia",
-      "hs": null,
-      "as": null,
+      "hs": 1,
+      "as": 1,
       "status": "FINISHED"
     },
     {
@@ -1033,8 +1033,8 @@
       "home": "Tunisia",
       "away": "Japan",
       "hs": 0,
-      "as": 1,
-      "status": "IN_PLAY"
+      "as": 2,
+      "status": "PAUSED"
     },
     {
       "date": "2026-06-21T16:00:00Z",
