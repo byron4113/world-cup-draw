@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T22:04:40.589Z",
+  "lastUpdated": "2026-06-21T04:24:08.804Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -259,28 +259,28 @@
       "reached": "group",
       "group": "E",
       "rank": 3,
-      "played": 1,
+      "played": 2,
       "won": 0,
-      "draw": 0,
+      "draw": 1,
       "lost": 1,
       "gf": 0,
       "ga": 1,
       "gd": -1,
-      "points": 0
+      "points": 1
     },
     "Curaçao": {
       "status": "alive",
       "reached": "group",
       "group": "E",
       "rank": 4,
-      "played": 1,
+      "played": 2,
       "won": 0,
-      "draw": 0,
+      "draw": 1,
       "lost": 1,
       "gf": 1,
       "ga": 7,
       "gd": -6,
-      "points": 0
+      "points": 1
     },
     "Netherlands": {
       "status": "alive",
@@ -315,28 +315,28 @@
       "reached": "group",
       "group": "F",
       "rank": 3,
-      "played": 1,
+      "played": 2,
       "won": 0,
-      "draw": 1,
+      "draw": 2,
       "lost": 0,
       "gf": 2,
       "ga": 2,
       "gd": 0,
-      "points": 1
+      "points": 2
     },
     "Tunisia": {
       "status": "alive",
       "reached": "group",
       "group": "F",
       "rank": 4,
-      "played": 1,
+      "played": 2,
       "won": 0,
-      "draw": 0,
+      "draw": 1,
       "lost": 1,
       "gf": 1,
       "ga": 5,
       "gd": -4,
-      "points": 0
+      "points": 1
     },
     "New Zealand": {
       "status": "alive",
@@ -702,8 +702,8 @@
       "group": "B",
       "home": "Canada",
       "away": "Bosnia",
-      "hs": 1,
-      "as": 1,
+      "hs": null,
+      "as": null,
       "status": "FINISHED"
     },
     {
@@ -1014,7 +1014,7 @@
       "away": "Ivory Coast",
       "hs": 2,
       "as": 1,
-      "status": "IN_PLAY"
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-21T00:00:00Z",
@@ -1022,9 +1022,9 @@
       "group": "E",
       "home": "Ecuador",
       "away": "Curaçao",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 0,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-21T04:00:00Z",
@@ -1032,9 +1032,9 @@
       "group": "F",
       "home": "Tunisia",
       "away": "Japan",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 1,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-21T16:00:00Z",
