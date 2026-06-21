@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T20:03:32.643Z",
+  "lastUpdated": "2026-06-21T22:36:44.783Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -408,21 +408,21 @@
       "gd": 4,
       "points": 4
     },
-    "Uruguay": {
+    "Cape Verde": {
       "status": "alive",
       "reached": "group",
       "group": "H",
       "rank": 2,
-      "played": 1,
-      "won": 0,
+      "played": 2,
+      "won": 1,
       "draw": 1,
       "lost": 0,
       "gf": 1,
-      "ga": 1,
-      "gd": 0,
-      "points": 1
+      "ga": 0,
+      "gd": 1,
+      "points": 4
     },
-    "Saudi Arabia": {
+    "Uruguay": {
       "status": "alive",
       "reached": "group",
       "group": "H",
@@ -432,22 +432,22 @@
       "draw": 1,
       "lost": 1,
       "gf": 1,
-      "ga": 5,
-      "gd": -4,
+      "ga": 2,
+      "gd": -1,
       "points": 1
     },
-    "Cape Verde": {
+    "Saudi Arabia": {
       "status": "alive",
       "reached": "group",
       "group": "H",
       "rank": 4,
-      "played": 1,
+      "played": 2,
       "won": 0,
       "draw": 1,
-      "lost": 0,
-      "gf": 0,
-      "ga": 0,
-      "gd": 0,
+      "lost": 1,
+      "gf": 1,
+      "ga": 5,
+      "gd": -4,
       "points": 1
     },
     "Norway": {
@@ -1042,7 +1042,7 @@
       "group": "H",
       "home": "Spain",
       "away": "Saudi Arabia",
-      "hs": 5,
+      "hs": 4,
       "as": 0,
       "status": "FINISHED"
     },
@@ -1054,7 +1054,7 @@
       "away": "Iran",
       "hs": 0,
       "as": 0,
-      "status": "PAUSED"
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-21T22:00:00Z",
@@ -1062,9 +1062,9 @@
       "group": "H",
       "home": "Uruguay",
       "away": "Cape Verde",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 1,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-22T01:00:00Z",
