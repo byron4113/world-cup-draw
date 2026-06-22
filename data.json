@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T22:36:44.783Z",
+  "lastUpdated": "2026-06-22T07:58:06.377Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -338,11 +338,25 @@
       "gd": -8,
       "points": 0
     },
-    "Iran": {
+    "Egypt": {
       "status": "alive",
       "reached": "group",
       "group": "G",
       "rank": 1,
+      "played": 2,
+      "won": 1,
+      "draw": 1,
+      "lost": 0,
+      "gf": 4,
+      "ga": 2,
+      "gd": 2,
+      "points": 4
+    },
+    "Iran": {
+      "status": "alive",
+      "reached": "group",
+      "group": "G",
+      "rank": 2,
       "played": 2,
       "won": 0,
       "draw": 2,
@@ -356,7 +370,7 @@
       "status": "alive",
       "reached": "group",
       "group": "G",
-      "rank": 2,
+      "rank": 3,
       "played": 2,
       "won": 0,
       "draw": 2,
@@ -370,28 +384,14 @@
       "status": "alive",
       "reached": "group",
       "group": "G",
-      "rank": 3,
-      "played": 1,
-      "won": 0,
-      "draw": 1,
-      "lost": 0,
-      "gf": 2,
-      "ga": 2,
-      "gd": 0,
-      "points": 1
-    },
-    "Egypt": {
-      "status": "alive",
-      "reached": "group",
-      "group": "G",
       "rank": 4,
-      "played": 1,
+      "played": 2,
       "won": 0,
       "draw": 1,
-      "lost": 0,
-      "gf": 1,
-      "ga": 1,
-      "gd": 0,
+      "lost": 1,
+      "gf": 3,
+      "ga": 5,
+      "gd": -2,
       "points": 1
     },
     "Spain": {
@@ -408,33 +408,33 @@
       "gd": 4,
       "points": 4
     },
-    "Cape Verde": {
+    "Uruguay": {
       "status": "alive",
       "reached": "group",
       "group": "H",
       "rank": 2,
       "played": 2,
-      "won": 1,
-      "draw": 1,
+      "won": 0,
+      "draw": 2,
       "lost": 0,
-      "gf": 1,
-      "ga": 0,
-      "gd": 1,
-      "points": 4
+      "gf": 3,
+      "ga": 3,
+      "gd": 0,
+      "points": 2
     },
-    "Uruguay": {
+    "Cape Verde": {
       "status": "alive",
       "reached": "group",
       "group": "H",
       "rank": 3,
       "played": 2,
       "won": 0,
-      "draw": 1,
-      "lost": 1,
-      "gf": 1,
+      "draw": 2,
+      "lost": 0,
+      "gf": 2,
       "ga": 2,
-      "gd": -1,
-      "points": 1
+      "gd": 0,
+      "points": 2
     },
     "Saudi Arabia": {
       "status": "alive",
@@ -1062,9 +1062,9 @@
       "group": "H",
       "home": "Uruguay",
       "away": "Cape Verde",
-      "hs": 0,
-      "as": 1,
-      "status": "IN_PLAY"
+      "hs": 2,
+      "as": 2,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-22T01:00:00Z",
@@ -1072,9 +1072,9 @@
       "group": "G",
       "home": "New Zealand",
       "away": "Egypt",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 1,
+      "as": 3,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-22T17:00:00Z",
