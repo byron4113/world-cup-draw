@@ -147,10 +147,59 @@ function bestFirst(a, b) {
 
 function render(live) {
   const teams = TEAMS.map((t) => teamWithStatus(t, live));
+  renderStageBar(live);
   renderLeaderboard(teams, live);
   renderRosters(teams);
   renderFixtures(live.fixtures || []);
   renderFooter(live);
+}
+
+// --- Tournament progress stepper --------------------------------------------
+const STAGE_TIMELINE = [
+  { key: "group", label: "Groups" },
+  { key: "r32", label: "R32" },
+  { key: "r16", label: "R16" },
+  { key: "qf", label: "QF" },
+  { key: "sf", label: "SF" },
+  { key: "final", label: "Final" },
+];
+
+function renderStageBar(live) {
+  const el = $("#stagebar");
+  if (!el) return;
+  const fixtures = live.fixtures || [];
+  const started = new Set();
+  const byStage = {};
+  for (const f of fixtures) {
+    (byStage[f.stage] = byStage[f.stage] || []).push(f);
+    if (f.status && !["SCHEDULED", "TIMED", "POSTPONED", "CANCELLED"].includes(f.status)) {
+      started.add(f.stage);
+    }
+  }
+  const isComplete = (key) => {
+    const arr = byStage[key] || [];
+    return arr.length > 0 && arr.every((f) => f.status === "FINISHED");
+  };
+  // Current stage = the furthest round under way, OR the next round once the
+  // previous one has fully finished (so e.g. it sits on "Final" once the semis
+  // are done, before the final has kicked off).
+  let lastStarted = 0;
+  STAGE_TIMELINE.forEach((s, i) => { if (started.has(s.key)) lastStarted = i; });
+  let lastComplete = -1;
+  STAGE_TIMELINE.forEach((s, i) => { if (isComplete(s.key)) lastComplete = i; });
+  const lastIdx = STAGE_TIMELINE.length - 1;
+  let cur = Math.min(lastIdx, Math.max(lastStarted, lastComplete + 1));
+  const done = !!live.champion; // whole thing finished
+  if (done) cur = lastIdx;
+
+  el.innerHTML =
+    `<ol class="stagebar">` +
+    STAGE_TIMELINE.map((s, i) => {
+      let cls = i < cur ? "done" : i === cur ? "current" : "todo";
+      if (done && i === cur) cls = "done current";
+      return `<li class="stage ${cls}"><span class="stage-dot"></span><span class="stage-label">${s.label}</span></li>`;
+    }).join("") +
+    `</ol>`;
 }
 
 // --- "Who's ahead" leaderboard ----------------------------------------------

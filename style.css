@@ -172,6 +172,34 @@ main { max-width: 1000px; margin: 0 auto; padding: 0 18px 60px; }
   border: 2px solid var(--ink); border-radius: 999px; white-space: nowrap;
 }
 
+/* ---- Tournament progress stepper ---- */
+.stagebar {
+  list-style: none; margin: 0 auto; padding: 0;
+  display: flex; justify-content: space-between;
+  max-width: 620px; position: relative;
+}
+.stagebar .stage { flex: 1; text-align: center; position: relative; }
+/* connecting line segment (to the left of each dot) */
+.stagebar .stage::before {
+  content: ""; position: absolute; top: 8px; left: -50%; width: 100%; height: 3px;
+  background: rgba(255, 255, 255, 0.25); z-index: 0;
+}
+.stagebar .stage:first-child::before { display: none; }
+.stagebar .stage.done::before, .stagebar .stage.current::before { background: var(--gold); }
+.stage-dot {
+  position: relative; z-index: 1; display: block;
+  width: 18px; height: 18px; margin: 0 auto 7px; border-radius: 50%;
+  background: var(--pitch-dark); border: 3px solid var(--ink); box-sizing: border-box;
+}
+.stage.done .stage-dot { background: var(--gold); }
+.stage.current .stage-dot { background: var(--gold); box-shadow: 0 0 0 4px rgba(255, 206, 50, 0.35); }
+.stage-label {
+  font-family: "Anton", sans-serif; font-size: 0.8rem; text-transform: uppercase;
+  letter-spacing: 0.03em; color: rgba(255, 255, 255, 0.7);
+}
+.stage.done .stage-label { color: #fff; }
+.stage.current .stage-label { color: var(--gold); }
+
 /* ---- Footer ---- */
 .site-foot { text-align: center; color: rgba(255,255,255,0.85); font-size: 0.8rem; font-weight: 600; padding: 26px 16px 44px; }
 
@@ -179,6 +207,9 @@ main { max-width: 1000px; margin: 0 auto; padding: 0 18px 60px; }
   .leaderboard { grid-template-columns: 1fr; }
   .rosters { grid-template-columns: 1fr; }
   .podium-card, .roster { transform: none; }
+  .stage-label { font-size: 0.62rem; }
+  .stage-dot { width: 15px; height: 15px; }
+  .stagebar .stage::before { top: 6px; }
   .fixture { grid-template-columns: 38px minmax(0, 1fr) auto minmax(0, 1fr) 38px; padding: 8px 6px; gap: 4px; }
   .fx-when { font-size: 0.5rem; }
   .fx-team { font-size: 0.74rem; gap: 4px; }
