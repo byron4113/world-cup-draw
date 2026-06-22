@@ -218,6 +218,24 @@ async function main() {
     t.reached = m._stage; // they got knocked out at this stage
   }
 
+  // Early group elimination (bulletproof, no tiebreak guesswork):
+  // once a group has finished all its games, a team is OUT if THREE teammates
+  // have STRICTLY more points — that makes it mathematically last (4th), which
+  // can never qualify (top 2 + best-8 thirds). Teams tied for 3rd/4th are left
+  // alone and resolved later by the actual bracket. Purely additive.
+  const byGroup = {};
+  for (const t of Object.values(teams)) {
+    if (t.group) (byGroup[t.group] = byGroup[t.group] || []).push(t);
+  }
+  for (const g of Object.values(byGroup)) {
+    if (g.length < 4 || !g.every((t) => t.played === 3)) continue; // group complete only
+    for (const t of g) {
+      if (t.status !== "alive") continue;
+      const strictlyAbove = g.filter((o) => (o.points || 0) > (t.points || 0)).length;
+      if (strictlyAbove >= 3) { t.status = "out"; t.reached = "group"; }
+    }
+  }
+
   // Group eliminations: once the knockout bracket exists, any team not in it is out.
   if (knockoutsStarted) {
     const inBracket = new Set();
