@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-06-23T13:48:06.513Z",
+  "lastUpdated": "2026-06-23T16:44:19.589Z",
   "champion": null,
   "teams": {
     "Mexico": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "A",
       "rank": 1,
       "played": 2,
@@ -172,7 +172,7 @@
     },
     "USA": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "D",
       "rank": 1,
       "played": 2,
@@ -228,7 +228,7 @@
     },
     "Germany": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "E",
       "rank": 1,
       "played": 2,
@@ -1420,7 +1420,7 @@
       "date": "2026-06-29T20:30:00Z",
       "stage": "r32",
       "group": null,
-      "home": "Germany",
+      "home": "TBD",
       "away": "TBD",
       "hs": null,
       "as": null,
@@ -1460,7 +1460,7 @@
       "date": "2026-07-01T01:00:00Z",
       "stage": "r32",
       "group": null,
-      "home": "Mexico",
+      "home": "TBD",
       "away": "TBD",
       "hs": null,
       "as": null,
@@ -1490,7 +1490,7 @@
       "date": "2026-07-02T00:00:00Z",
       "stage": "r32",
       "group": null,
-      "home": "USA",
+      "home": "TBD",
       "away": "TBD",
       "hs": null,
       "as": null,
