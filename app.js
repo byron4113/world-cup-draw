@@ -395,6 +395,18 @@ function renderFixtures(fixtures) {
 }
 
 function renderFooter(live) {
+  // Total games left in the whole tournament (anything not finished).
+  const fixtures = live.fixtures || [];
+  const rem = $("#remaining");
+  if (rem) {
+    if (fixtures.length) {
+      const left = fixtures.filter((f) => f.status !== "FINISHED").length;
+      rem.textContent = `${left} ${left === 1 ? "game" : "games"} remaining in the tournament`;
+    } else {
+      rem.textContent = "";
+    }
+  }
+
   if (live.lastUpdated) {
     const d = new Date(live.lastUpdated);
     $("#updated").textContent = "Last updated " + d.toLocaleString();
