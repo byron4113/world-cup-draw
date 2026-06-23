@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-06-23T06:29:14.533Z",
+  "lastUpdated": "2026-06-23T10:45:04.455Z",
   "champion": null,
   "teams": {
     "Mexico": {
       "status": "alive",
-      "reached": "group",
+      "reached": "r32",
       "group": "A",
       "rank": 1,
       "played": 2,
@@ -17,7 +17,7 @@
       "points": 6
     },
     "South Korea": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "A",
       "rank": 2,
@@ -31,7 +31,7 @@
       "points": 3
     },
     "Czechia": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "A",
       "rank": 3,
@@ -45,7 +45,7 @@
       "points": 1
     },
     "South Africa": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "A",
       "rank": 4,
@@ -59,7 +59,7 @@
       "points": 1
     },
     "Canada": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "B",
       "rank": 1,
@@ -73,7 +73,7 @@
       "points": 4
     },
     "Switzerland": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "B",
       "rank": 2,
@@ -87,7 +87,7 @@
       "points": 4
     },
     "Bosnia": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "B",
       "rank": 3,
@@ -101,7 +101,7 @@
       "points": 1
     },
     "Qatar": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "B",
       "rank": 4,
@@ -115,7 +115,7 @@
       "points": 1
     },
     "Brazil": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "C",
       "rank": 1,
@@ -129,7 +129,7 @@
       "points": 4
     },
     "Morocco": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "C",
       "rank": 2,
@@ -143,7 +143,7 @@
       "points": 4
     },
     "Scotland": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "C",
       "rank": 3,
@@ -157,7 +157,7 @@
       "points": 3
     },
     "Haiti": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "C",
       "rank": 4,
@@ -172,7 +172,7 @@
     },
     "USA": {
       "status": "alive",
-      "reached": "group",
+      "reached": "r32",
       "group": "D",
       "rank": 1,
       "played": 2,
@@ -185,7 +185,7 @@
       "points": 6
     },
     "Australia": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "D",
       "rank": 2,
@@ -199,7 +199,7 @@
       "points": 3
     },
     "Paraguay": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "D",
       "rank": 3,
@@ -213,7 +213,7 @@
       "points": 3
     },
     "Türkiye": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "D",
       "rank": 4,
@@ -228,7 +228,7 @@
     },
     "Germany": {
       "status": "alive",
-      "reached": "group",
+      "reached": "r32",
       "group": "E",
       "rank": 1,
       "played": 2,
@@ -241,7 +241,7 @@
       "points": 6
     },
     "Ivory Coast": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "E",
       "rank": 2,
@@ -255,7 +255,7 @@
       "points": 3
     },
     "Ecuador": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "E",
       "rank": 3,
@@ -269,7 +269,7 @@
       "points": 1
     },
     "Curaçao": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "E",
       "rank": 4,
@@ -283,7 +283,7 @@
       "points": 1
     },
     "Netherlands": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "F",
       "rank": 1,
@@ -297,7 +297,7 @@
       "points": 4
     },
     "Japan": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "F",
       "rank": 2,
@@ -311,7 +311,7 @@
       "points": 4
     },
     "Sweden": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "F",
       "rank": 3,
@@ -325,7 +325,7 @@
       "points": 3
     },
     "Tunisia": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "F",
       "rank": 4,
@@ -339,7 +339,7 @@
       "points": 0
     },
     "Egypt": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "G",
       "rank": 1,
@@ -353,7 +353,7 @@
       "points": 4
     },
     "Iran": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "G",
       "rank": 2,
@@ -367,7 +367,7 @@
       "points": 2
     },
     "Belgium": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "G",
       "rank": 3,
@@ -381,7 +381,7 @@
       "points": 2
     },
     "New Zealand": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "G",
       "rank": 4,
@@ -395,7 +395,7 @@
       "points": 1
     },
     "Spain": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "H",
       "rank": 1,
@@ -409,7 +409,7 @@
       "points": 4
     },
     "Uruguay": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "H",
       "rank": 2,
@@ -423,7 +423,7 @@
       "points": 2
     },
     "Cape Verde": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "H",
       "rank": 3,
@@ -437,7 +437,7 @@
       "points": 2
     },
     "Saudi Arabia": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "H",
       "rank": 4,
@@ -451,7 +451,7 @@
       "points": 1
     },
     "France": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "I",
       "rank": 1,
@@ -465,7 +465,7 @@
       "points": 6
     },
     "Norway": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "I",
       "rank": 2,
@@ -479,7 +479,7 @@
       "points": 6
     },
     "Senegal": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "I",
       "rank": 3,
@@ -493,7 +493,7 @@
       "points": 0
     },
     "Iraq": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "I",
       "rank": 4,
@@ -507,7 +507,7 @@
       "points": 0
     },
     "Argentina": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "J",
       "rank": 1,
@@ -521,7 +521,7 @@
       "points": 6
     },
     "Austria": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "J",
       "rank": 2,
@@ -535,7 +535,7 @@
       "points": 3
     },
     "Algeria": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "J",
       "rank": 3,
@@ -549,7 +549,7 @@
       "points": 3
     },
     "Jordan": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "J",
       "rank": 4,
@@ -563,7 +563,7 @@
       "points": 0
     },
     "Colombia": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "K",
       "rank": 1,
@@ -577,7 +577,7 @@
       "points": 3
     },
     "DR Congo": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "K",
       "rank": 2,
@@ -591,7 +591,7 @@
       "points": 1
     },
     "Portugal": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "K",
       "rank": 2,
@@ -605,7 +605,7 @@
       "points": 1
     },
     "Uzbekistan": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "K",
       "rank": 4,
@@ -619,7 +619,7 @@
       "points": 0
     },
     "England": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "L",
       "rank": 1,
@@ -633,7 +633,7 @@
       "points": 3
     },
     "Ghana": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "L",
       "rank": 2,
@@ -647,7 +647,7 @@
       "points": 3
     },
     "Panama": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "L",
       "rank": 3,
@@ -661,7 +661,7 @@
       "points": 0
     },
     "Croatia": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "L",
       "rank": 4,
@@ -1420,7 +1420,7 @@
       "date": "2026-06-29T20:30:00Z",
       "stage": "r32",
       "group": null,
-      "home": "TBD",
+      "home": "Germany",
       "away": "TBD",
       "hs": null,
       "as": null,
@@ -1460,7 +1460,7 @@
       "date": "2026-07-01T01:00:00Z",
       "stage": "r32",
       "group": null,
-      "home": "TBD",
+      "home": "Mexico",
       "away": "TBD",
       "hs": null,
       "as": null,
@@ -1490,7 +1490,7 @@
       "date": "2026-07-02T00:00:00Z",
       "stage": "r32",
       "group": null,
-      "home": "TBD",
+      "home": "USA",
       "away": "TBD",
       "hs": null,
       "as": null,
