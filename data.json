@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T01:25:08.353Z",
+  "lastUpdated": "2026-06-23T06:29:14.533Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -473,8 +473,8 @@
       "won": 2,
       "draw": 0,
       "lost": 0,
-      "gf": 5,
-      "ga": 1,
+      "gf": 7,
+      "ga": 3,
       "gd": 4,
       "points": 6
     },
@@ -487,8 +487,8 @@
       "won": 0,
       "draw": 0,
       "lost": 2,
-      "gf": 1,
-      "ga": 4,
+      "gf": 3,
+      "ga": 6,
       "gd": -3,
       "points": 0
     },
@@ -534,31 +534,31 @@
       "gd": 0,
       "points": 3
     },
-    "Jordan": {
-      "status": "alive",
-      "reached": "group",
-      "group": "J",
-      "rank": 3,
-      "played": 1,
-      "won": 0,
-      "draw": 0,
-      "lost": 1,
-      "gf": 1,
-      "ga": 3,
-      "gd": -2,
-      "points": 0
-    },
     "Algeria": {
       "status": "alive",
       "reached": "group",
       "group": "J",
-      "rank": 4,
-      "played": 1,
-      "won": 0,
+      "rank": 3,
+      "played": 2,
+      "won": 1,
       "draw": 0,
       "lost": 1,
-      "gf": 0,
-      "ga": 3,
+      "gf": 2,
+      "ga": 4,
+      "gd": -2,
+      "points": 3
+    },
+    "Jordan": {
+      "status": "alive",
+      "reached": "group",
+      "group": "J",
+      "rank": 4,
+      "played": 2,
+      "won": 0,
+      "draw": 0,
+      "lost": 2,
+      "gf": 2,
+      "ga": 5,
       "gd": -3,
       "points": 0
     },
@@ -1103,8 +1103,8 @@
       "home": "Norway",
       "away": "Senegal",
       "hs": 3,
-      "as": 1,
-      "status": "IN_PLAY"
+      "as": 2,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-23T03:00:00Z",
@@ -1112,9 +1112,9 @@
       "group": "J",
       "home": "Jordan",
       "away": "Algeria",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 1,
+      "as": 2,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-23T17:00:00Z",
