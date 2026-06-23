@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T16:44:19.589Z",
+  "lastUpdated": "2026-06-23T19:20:33.935Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -562,11 +562,25 @@
       "gd": -3,
       "points": 0
     },
-    "Colombia": {
+    "Portugal": {
       "status": "alive",
       "reached": "group",
       "group": "K",
       "rank": 1,
+      "played": 2,
+      "won": 1,
+      "draw": 1,
+      "lost": 0,
+      "gf": 6,
+      "ga": 1,
+      "gd": 5,
+      "points": 4
+    },
+    "Colombia": {
+      "status": "alive",
+      "reached": "group",
+      "group": "K",
+      "rank": 2,
       "played": 1,
       "won": 1,
       "draw": 0,
@@ -580,21 +594,7 @@
       "status": "alive",
       "reached": "group",
       "group": "K",
-      "rank": 2,
-      "played": 1,
-      "won": 0,
-      "draw": 1,
-      "lost": 0,
-      "gf": 1,
-      "ga": 1,
-      "gd": 0,
-      "points": 1
-    },
-    "Portugal": {
-      "status": "alive",
-      "reached": "group",
-      "group": "K",
-      "rank": 2,
+      "rank": 3,
       "played": 1,
       "won": 0,
       "draw": 1,
@@ -609,13 +609,13 @@
       "reached": "group",
       "group": "K",
       "rank": 4,
-      "played": 1,
+      "played": 2,
       "won": 0,
       "draw": 0,
-      "lost": 1,
+      "lost": 2,
       "gf": 1,
-      "ga": 3,
-      "gd": -2,
+      "ga": 8,
+      "gd": -7,
       "points": 0
     },
     "England": {
@@ -1122,9 +1122,9 @@
       "group": "K",
       "home": "Portugal",
       "away": "Uzbekistan",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 5,
+      "as": 0,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-23T20:00:00Z",
@@ -1134,7 +1134,7 @@
       "away": "Ghana",
       "hs": null,
       "as": null,
-      "status": "TIMED"
+      "status": "SCHEDULED"
     },
     {
       "date": "2026-06-23T23:00:00Z",
