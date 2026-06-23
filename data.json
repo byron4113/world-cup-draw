@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T22:56:36.228Z",
+  "lastUpdated": "2026-06-23T01:25:08.353Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -459,9 +459,9 @@
       "won": 2,
       "draw": 0,
       "lost": 0,
-      "gf": 4,
+      "gf": 6,
       "ga": 1,
-      "gd": 3,
+      "gd": 5,
       "points": 6
     },
     "Norway": {
@@ -469,27 +469,27 @@
       "reached": "group",
       "group": "I",
       "rank": 2,
-      "played": 1,
-      "won": 1,
+      "played": 2,
+      "won": 2,
       "draw": 0,
       "lost": 0,
-      "gf": 4,
+      "gf": 5,
       "ga": 1,
-      "gd": 3,
-      "points": 3
+      "gd": 4,
+      "points": 6
     },
     "Senegal": {
       "status": "alive",
       "reached": "group",
       "group": "I",
       "rank": 3,
-      "played": 1,
+      "played": 2,
       "won": 0,
       "draw": 0,
-      "lost": 1,
+      "lost": 2,
       "gf": 1,
-      "ga": 3,
-      "gd": -2,
+      "ga": 4,
+      "gd": -3,
       "points": 0
     },
     "Iraq": {
@@ -502,8 +502,8 @@
       "draw": 0,
       "lost": 2,
       "gf": 1,
-      "ga": 5,
-      "gd": -4,
+      "ga": 7,
+      "gd": -6,
       "points": 0
     },
     "Argentina": {
@@ -1092,9 +1092,9 @@
       "group": "I",
       "home": "France",
       "away": "Iraq",
-      "hs": 1,
+      "hs": 3,
       "as": 0,
-      "status": "PAUSED"
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-23T00:00:00Z",
@@ -1102,9 +1102,9 @@
       "group": "I",
       "home": "Norway",
       "away": "Senegal",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 3,
+      "as": 1,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-23T03:00:00Z",
