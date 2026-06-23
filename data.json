@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T19:20:33.935Z",
+  "lastUpdated": "2026-06-23T21:09:03.870Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -623,28 +623,28 @@
       "reached": "group",
       "group": "L",
       "rank": 1,
-      "played": 1,
+      "played": 2,
       "won": 1,
-      "draw": 0,
+      "draw": 1,
       "lost": 0,
       "gf": 4,
       "ga": 2,
       "gd": 2,
-      "points": 3
+      "points": 4
     },
     "Ghana": {
       "status": "alive",
       "reached": "group",
       "group": "L",
       "rank": 2,
-      "played": 1,
+      "played": 2,
       "won": 1,
-      "draw": 0,
+      "draw": 1,
       "lost": 0,
       "gf": 1,
       "ga": 0,
       "gd": 1,
-      "points": 3
+      "points": 4
     },
     "Panama": {
       "status": "alive",
@@ -1132,9 +1132,9 @@
       "group": "L",
       "home": "England",
       "away": "Ghana",
-      "hs": null,
-      "as": null,
-      "status": "SCHEDULED"
+      "hs": 0,
+      "as": 0,
+      "status": "PAUSED"
     },
     {
       "date": "2026-06-23T23:00:00Z",
