@@ -174,7 +174,6 @@ async function main() {
 
   // ---- Walk every match to work out bracket depth + eliminations -----------
   const koFinished = []; // finished knockout matches
-  let knockoutsStarted = false;
   let championName = null;
 
   for (const m of matches) {
@@ -185,7 +184,6 @@ async function main() {
     if (away) ensure(away);
 
     const isKO = KO_ORDER.includes(stage);
-    if (isKO && (home || away)) knockoutsStarted = true;
 
     // "reached" = the deepest stage a team appears in (scheduled or played).
     const bump = (name) => {
@@ -236,8 +234,14 @@ async function main() {
     }
   }
 
-  // Group eliminations: once the knockout bracket exists, any team not in it is out.
-  if (knockoutsStarted) {
+  // Group eliminations via the bracket — but ONLY once the FULL Round of 32 is
+  // populated (all 16 matches have both real teams). This prevents a partial or
+  // glitchy feed (e.g. only a few teams assigned) from wrongly marking everyone out.
+  const r32Matches = matches.filter((m) => (STAGE_MAP[m.stage] || "") === "r32");
+  const r32Ready =
+    r32Matches.length >= 16 &&
+    r32Matches.every((m) => m.homeTeam?.name && m.awayTeam?.name);
+  if (r32Ready) {
     const inBracket = new Set();
     for (const m of matches) {
       const stage = STAGE_MAP[m.stage] || "group";
