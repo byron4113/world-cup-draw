@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T19:02:32.560Z",
+  "lastUpdated": "2026-06-24T20:59:05.308Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -58,33 +58,33 @@
       "gd": -2,
       "points": 1
     },
-    "Canada": {
+    "Switzerland": {
       "status": "alive",
       "reached": "group",
       "group": "B",
       "rank": 1,
       "played": 3,
-      "won": 1,
-      "draw": 2,
+      "won": 2,
+      "draw": 1,
       "lost": 0,
       "gf": 7,
-      "ga": 1,
-      "gd": 6,
-      "points": 5
+      "ga": 2,
+      "gd": 5,
+      "points": 7
     },
-    "Switzerland": {
+    "Canada": {
       "status": "alive",
       "reached": "group",
       "group": "B",
       "rank": 2,
       "played": 3,
       "won": 1,
-      "draw": 2,
-      "lost": 0,
-      "gf": 5,
-      "ga": 2,
-      "gd": 3,
-      "points": 5
+      "draw": 1,
+      "lost": 1,
+      "gf": 7,
+      "ga": 3,
+      "gd": 4,
+      "points": 4
     },
     "Bosnia": {
       "status": "alive",
@@ -92,27 +92,27 @@
       "group": "B",
       "rank": 3,
       "played": 3,
-      "won": 0,
-      "draw": 2,
+      "won": 1,
+      "draw": 1,
       "lost": 1,
-      "gf": 2,
-      "ga": 5,
-      "gd": -3,
-      "points": 2
+      "gf": 4,
+      "ga": 6,
+      "gd": -2,
+      "points": 4
     },
     "Qatar": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "B",
       "rank": 4,
       "played": 3,
       "won": 0,
-      "draw": 2,
-      "lost": 1,
-      "gf": 1,
-      "ga": 7,
-      "gd": -6,
-      "points": 2
+      "draw": 1,
+      "lost": 2,
+      "gf": 2,
+      "ga": 9,
+      "gd": -7,
+      "points": 1
     },
     "Brazil": {
       "status": "alive",
@@ -1162,9 +1162,9 @@
       "group": "B",
       "home": "Switzerland",
       "away": "Canada",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 2,
+      "as": 1,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-24T19:00:00Z",
@@ -1172,9 +1172,9 @@
       "group": "B",
       "home": "Bosnia",
       "away": "Qatar",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 3,
+      "as": 1,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-24T22:00:00Z",
