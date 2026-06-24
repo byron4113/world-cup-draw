@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T17:21:17.832Z",
+  "lastUpdated": "2026-06-24T19:02:32.560Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -63,56 +63,56 @@
       "reached": "group",
       "group": "B",
       "rank": 1,
-      "played": 2,
+      "played": 3,
       "won": 1,
-      "draw": 1,
+      "draw": 2,
       "lost": 0,
       "gf": 7,
       "ga": 1,
       "gd": 6,
-      "points": 4
+      "points": 5
     },
     "Switzerland": {
       "status": "alive",
       "reached": "group",
       "group": "B",
       "rank": 2,
-      "played": 2,
+      "played": 3,
       "won": 1,
-      "draw": 1,
+      "draw": 2,
       "lost": 0,
       "gf": 5,
       "ga": 2,
       "gd": 3,
-      "points": 4
+      "points": 5
     },
     "Bosnia": {
       "status": "alive",
       "reached": "group",
       "group": "B",
       "rank": 3,
-      "played": 2,
+      "played": 3,
       "won": 0,
-      "draw": 1,
+      "draw": 2,
       "lost": 1,
       "gf": 2,
       "ga": 5,
       "gd": -3,
-      "points": 1
+      "points": 2
     },
     "Qatar": {
       "status": "alive",
       "reached": "group",
       "group": "B",
       "rank": 4,
-      "played": 2,
+      "played": 3,
       "won": 0,
-      "draw": 1,
+      "draw": 2,
       "lost": 1,
       "gf": 1,
       "ga": 7,
       "gd": -6,
-      "points": 1
+      "points": 2
     },
     "Brazil": {
       "status": "alive",
