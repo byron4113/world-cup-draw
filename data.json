@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T20:59:05.308Z",
+  "lastUpdated": "2026-06-24T21:02:17.750Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -68,8 +68,8 @@
       "draw": 1,
       "lost": 0,
       "gf": 7,
-      "ga": 2,
-      "gd": 5,
+      "ga": 3,
+      "gd": 4,
       "points": 7
     },
     "Canada": {
@@ -81,9 +81,9 @@
       "won": 1,
       "draw": 1,
       "lost": 1,
-      "gf": 7,
+      "gf": 8,
       "ga": 3,
-      "gd": 4,
+      "gd": 5,
       "points": 4
     },
     "Bosnia": {
@@ -95,9 +95,9 @@
       "won": 1,
       "draw": 1,
       "lost": 1,
-      "gf": 4,
+      "gf": 5,
       "ga": 6,
-      "gd": -2,
+      "gd": -1,
       "points": 4
     },
     "Qatar": {
@@ -110,8 +110,8 @@
       "draw": 1,
       "lost": 2,
       "gf": 2,
-      "ga": 9,
-      "gd": -7,
+      "ga": 10,
+      "gd": -8,
       "points": 1
     },
     "Brazil": {
@@ -1164,7 +1164,7 @@
       "away": "Canada",
       "hs": 2,
       "as": 1,
-      "status": "IN_PLAY"
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-24T19:00:00Z",
