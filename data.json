@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T22:39:35.658Z",
+  "lastUpdated": "2026-06-24T00:12:56.326Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -651,28 +651,28 @@
       "reached": "group",
       "group": "L",
       "rank": 3,
-      "played": 1,
+      "played": 2,
       "won": 0,
-      "draw": 0,
+      "draw": 1,
       "lost": 1,
       "gf": 0,
       "ga": 1,
       "gd": -1,
-      "points": 0
+      "points": 1
     },
     "Croatia": {
       "status": "alive",
       "reached": "group",
       "group": "L",
       "rank": 4,
-      "played": 1,
+      "played": 2,
       "won": 0,
-      "draw": 0,
+      "draw": 1,
       "lost": 1,
       "gf": 2,
       "ga": 4,
       "gd": -2,
-      "points": 0
+      "points": 1
     }
   },
   "fixtures": [
@@ -1142,9 +1142,9 @@
       "group": "L",
       "home": "Panama",
       "away": "Croatia",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 0,
+      "status": "LIVE"
     },
     {
       "date": "2026-06-24T02:00:00Z",
