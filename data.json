@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T21:03:37.324Z",
+  "lastUpdated": "2026-06-25T21:37:10.432Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -249,9 +249,9 @@
       "won": 2,
       "draw": 0,
       "lost": 1,
-      "gf": 3,
+      "gf": 4,
       "ga": 2,
-      "gd": 1,
+      "gd": 2,
       "points": 6
     },
     "Ecuador": {
@@ -269,7 +269,7 @@
       "points": 2
     },
     "Curaçao": {
-      "status": "out",
+      "status": "alive",
       "reached": "group",
       "group": "E",
       "rank": 4,
@@ -278,8 +278,8 @@
       "draw": 1,
       "lost": 2,
       "gf": 1,
-      "ga": 8,
-      "gd": -7,
+      "ga": 9,
+      "gd": -8,
       "points": 1
     },
     "Netherlands": {
@@ -1224,7 +1224,7 @@
       "away": "Germany",
       "hs": 1,
       "as": 1,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-25T20:00:00Z",
@@ -1233,8 +1233,8 @@
       "home": "Curaçao",
       "away": "Ivory Coast",
       "hs": 0,
-      "as": 1,
-      "status": "PAUSED"
+      "as": 2,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-25T23:00:00Z",
