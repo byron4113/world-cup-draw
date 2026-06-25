@@ -217,16 +217,27 @@ async function main() {
   }
 
   // Early group elimination (bulletproof, no tiebreak guesswork):
-  // once a group has finished all its games, a team is OUT if THREE teammates
-  // have STRICTLY more points — that makes it mathematically last (4th), which
-  // can never qualify (top 2 + best-8 thirds). Teams tied for 3rd/4th are left
-  // alone and resolved later by the actual bracket. Purely additive.
+  // once a group's games are ALL FINISHED, a team is OUT if THREE teammates have
+  // STRICTLY more points (mathematically last / 4th — can never qualify). We key
+  // "group finished" off the real match statuses (NOT the standings' played count,
+  // which the feed bumps mid-match), so nobody is marked out during a live game.
+  // Teams tied for 3rd/4th are left for the bracket. Purely additive.
+  const groupFx = {};
+  for (const m of matches) {
+    if ((STAGE_MAP[m.stage] || "") !== "group") continue;
+    const gl = groupLetter(m.group);
+    if (gl) (groupFx[gl] = groupFx[gl] || []).push(m);
+  }
+  const groupFinished = (gl) => {
+    const arr = groupFx[gl] || [];
+    return arr.length >= 6 && arr.every((m) => m.status === "FINISHED");
+  };
   const byGroup = {};
   for (const t of Object.values(teams)) {
     if (t.group) (byGroup[t.group] = byGroup[t.group] || []).push(t);
   }
-  for (const g of Object.values(byGroup)) {
-    if (g.length < 4 || !g.every((t) => t.played === 3)) continue; // group complete only
+  for (const [gl, g] of Object.entries(byGroup)) {
+    if (g.length < 4 || !groupFinished(gl)) continue; // only once every group game is over
     for (const t of g) {
       if (t.status !== "alive") continue;
       const strictlyAbove = g.filter((o) => (o.points || 0) > (t.points || 0)).length;
