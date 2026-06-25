@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T22:41:11.426Z",
+  "lastUpdated": "2026-06-25T01:28:25.329Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -7,56 +7,56 @@
       "reached": "group",
       "group": "A",
       "rank": 1,
-      "played": 2,
+      "played": 3,
       "won": 2,
-      "draw": 0,
+      "draw": 1,
       "lost": 0,
       "gf": 3,
       "ga": 0,
       "gd": 3,
-      "points": 6
+      "points": 7
     },
     "South Korea": {
       "status": "alive",
       "reached": "group",
       "group": "A",
       "rank": 2,
-      "played": 2,
+      "played": 3,
       "won": 1,
-      "draw": 0,
+      "draw": 1,
       "lost": 1,
       "gf": 2,
       "ga": 2,
       "gd": 0,
-      "points": 3
+      "points": 4
     },
     "Czechia": {
       "status": "alive",
       "reached": "group",
       "group": "A",
       "rank": 3,
-      "played": 2,
+      "played": 3,
       "won": 0,
-      "draw": 1,
+      "draw": 2,
       "lost": 1,
       "gf": 2,
       "ga": 3,
       "gd": -1,
-      "points": 1
+      "points": 2
     },
     "South Africa": {
       "status": "alive",
       "reached": "group",
       "group": "A",
       "rank": 4,
-      "played": 2,
+      "played": 3,
       "won": 0,
-      "draw": 1,
+      "draw": 2,
       "lost": 1,
       "gf": 1,
       "ga": 3,
       "gd": -2,
-      "points": 1
+      "points": 2
     },
     "Switzerland": {
       "status": "alive",
@@ -123,9 +123,9 @@
       "won": 2,
       "draw": 1,
       "lost": 0,
-      "gf": 5,
+      "gf": 7,
       "ga": 1,
-      "gd": 4,
+      "gd": 6,
       "points": 7
     },
     "Morocco": {
@@ -134,13 +134,13 @@
       "group": "C",
       "rank": 2,
       "played": 3,
-      "won": 1,
+      "won": 2,
       "draw": 1,
-      "lost": 1,
-      "gf": 2,
-      "ga": 2,
-      "gd": 0,
-      "points": 4
+      "lost": 0,
+      "gf": 6,
+      "ga": 3,
+      "gd": 3,
+      "points": 7
     },
     "Scotland": {
       "status": "alive",
@@ -152,23 +152,23 @@
       "draw": 0,
       "lost": 2,
       "gf": 1,
-      "ga": 2,
-      "gd": -1,
+      "ga": 4,
+      "gd": -3,
       "points": 3
     },
     "Haiti": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "C",
       "rank": 4,
       "played": 3,
-      "won": 1,
+      "won": 0,
       "draw": 0,
-      "lost": 2,
-      "gf": 1,
-      "ga": 4,
-      "gd": -3,
-      "points": 3
+      "lost": 3,
+      "gf": 2,
+      "ga": 8,
+      "gd": -6,
+      "points": 0
     },
     "USA": {
       "status": "alive",
@@ -702,8 +702,8 @@
       "group": "B",
       "home": "Canada",
       "away": "Bosnia",
-      "hs": null,
-      "as": null,
+      "hs": 1,
+      "as": 1,
       "status": "FINISHED"
     },
     {
@@ -1182,9 +1182,9 @@
       "group": "C",
       "home": "Morocco",
       "away": "Haiti",
-      "hs": 0,
-      "as": 1,
-      "status": "LIVE"
+      "hs": 4,
+      "as": 2,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-24T22:00:00Z",
@@ -1193,8 +1193,8 @@
       "home": "Scotland",
       "away": "Brazil",
       "hs": 0,
-      "as": 2,
-      "status": "LIVE"
+      "as": 3,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-25T01:00:00Z",
@@ -1202,9 +1202,9 @@
       "group": "A",
       "home": "Czechia",
       "away": "Mexico",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 0,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-25T01:00:00Z",
@@ -1212,9 +1212,9 @@
       "group": "A",
       "home": "South Africa",
       "away": "South Korea",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 0,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-25T20:00:00Z",
