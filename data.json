@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T21:37:10.432Z",
+  "lastUpdated": "2026-06-25T22:48:33.313Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -233,12 +233,12 @@
       "rank": 1,
       "played": 3,
       "won": 2,
-      "draw": 1,
-      "lost": 0,
+      "draw": 0,
+      "lost": 1,
       "gf": 10,
-      "ga": 3,
-      "gd": 7,
-      "points": 7
+      "ga": 4,
+      "gd": 6,
+      "points": 6
     },
     "Ivory Coast": {
       "status": "alive",
@@ -260,16 +260,16 @@
       "group": "E",
       "rank": 3,
       "played": 3,
-      "won": 0,
-      "draw": 2,
+      "won": 1,
+      "draw": 1,
       "lost": 1,
-      "gf": 1,
+      "gf": 2,
       "ga": 2,
-      "gd": -1,
-      "points": 2
+      "gd": 0,
+      "points": 4
     },
     "Curaçao": {
-      "status": "alive",
+      "status": "out",
       "reached": "group",
       "group": "E",
       "rank": 4,
@@ -1222,9 +1222,9 @@
       "group": "E",
       "home": "Ecuador",
       "away": "Germany",
-      "hs": 1,
+      "hs": 2,
       "as": 1,
-      "status": "IN_PLAY"
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-25T20:00:00Z",
@@ -1234,7 +1234,7 @@
       "away": "Ivory Coast",
       "hs": 0,
       "as": 2,
-      "status": "IN_PLAY"
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-25T23:00:00Z",
