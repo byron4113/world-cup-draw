@@ -340,10 +340,12 @@ function renderFixtures(fixtures) {
 
   // Show a tidy window: the last few results + anything live + what's coming up.
   const sorted = [...fixtures].sort((a, b) => new Date(a.date) - new Date(b.date));
+  // Hide only fully-blank knockout fixtures (both teams still TBD). A partly-known
+  // one like "Germany vs TBD" still shows — it tells you who's already through.
+  const hasMatchup = (f) => f.home !== "TBD" || f.away !== "TBD";
   const recent = sorted.filter(isDone).slice(-5);
   const live = sorted.filter(isLive);
-  const upcoming = sorted.filter((f) => !isDone(f) && !isLive(f)).slice(0, 8);
-  const show = [...recent, ...live, ...upcoming];
+  const upcoming = sorted.filter((f) => !isDone(f) && !isLive(f) && hasMatchup(f)).slice(0, 8);
 
   // flag + name are separate spans (each a fixed-width column) so names line up.
   const teamCell = (name, side) => {
