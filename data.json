@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-06-26T23:36:10.079Z",
+  "lastUpdated": "2026-06-27T04:18:25.877Z",
   "champion": null,
   "teams": {
     "Mexico": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "A",
       "rank": 1,
       "played": 3,
@@ -18,7 +18,7 @@
     },
     "South Africa": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "A",
       "rank": 2,
       "played": 3,
@@ -60,7 +60,7 @@
     },
     "Switzerland": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "B",
       "rank": 1,
       "played": 3,
@@ -74,7 +74,7 @@
     },
     "Canada": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "B",
       "rank": 2,
       "played": 3,
@@ -88,7 +88,7 @@
     },
     "Bosnia": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "B",
       "rank": 3,
       "played": 3,
@@ -116,7 +116,7 @@
     },
     "Brazil": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "C",
       "rank": 1,
       "played": 3,
@@ -130,7 +130,7 @@
     },
     "Morocco": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "C",
       "rank": 2,
       "played": 3,
@@ -172,7 +172,7 @@
     },
     "USA": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "D",
       "rank": 1,
       "played": 3,
@@ -186,7 +186,7 @@
     },
     "Australia": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "D",
       "rank": 2,
       "played": 3,
@@ -228,7 +228,7 @@
     },
     "Germany": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "E",
       "rank": 1,
       "played": 3,
@@ -284,7 +284,7 @@
     },
     "Netherlands": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "F",
       "rank": 1,
       "played": 3,
@@ -298,7 +298,7 @@
     },
     "Japan": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "F",
       "rank": 2,
       "played": 3,
@@ -338,60 +338,60 @@
       "gd": -10,
       "points": 0
     },
-    "Egypt": {
+    "Belgium": {
       "status": "alive",
       "reached": "group",
       "group": "G",
       "rank": 1,
-      "played": 2,
+      "played": 3,
       "won": 1,
-      "draw": 1,
+      "draw": 2,
       "lost": 0,
-      "gf": 4,
-      "ga": 2,
+      "gf": 2,
+      "ga": 1,
+      "gd": 1,
+      "points": 5
+    },
+    "Egypt": {
+      "status": "alive",
+      "reached": "group",
+      "group": "G",
+      "rank": 2,
+      "played": 3,
+      "won": 1,
+      "draw": 2,
+      "lost": 0,
+      "gf": 5,
+      "ga": 3,
       "gd": 2,
-      "points": 4
+      "points": 5
     },
     "Iran": {
       "status": "alive",
       "reached": "group",
       "group": "G",
-      "rank": 2,
-      "played": 2,
-      "won": 0,
-      "draw": 2,
-      "lost": 0,
-      "gf": 2,
-      "ga": 2,
-      "gd": 0,
-      "points": 2
-    },
-    "Belgium": {
-      "status": "alive",
-      "reached": "group",
-      "group": "G",
       "rank": 3,
-      "played": 2,
+      "played": 3,
       "won": 0,
-      "draw": 2,
+      "draw": 3,
       "lost": 0,
-      "gf": 1,
-      "ga": 1,
+      "gf": 3,
+      "ga": 3,
       "gd": 0,
-      "points": 2
+      "points": 3
     },
     "New Zealand": {
       "status": "alive",
       "reached": "group",
       "group": "G",
       "rank": 4,
-      "played": 2,
+      "played": 3,
       "won": 0,
       "draw": 1,
-      "lost": 1,
+      "lost": 2,
       "gf": 3,
-      "ga": 5,
-      "gd": -2,
+      "ga": 6,
+      "gd": -3,
       "points": 1
     },
     "Spain": {
@@ -399,41 +399,41 @@
       "reached": "group",
       "group": "H",
       "rank": 1,
-      "played": 2,
-      "won": 1,
+      "played": 3,
+      "won": 2,
       "draw": 1,
       "lost": 0,
-      "gf": 4,
+      "gf": 5,
       "ga": 0,
-      "gd": 4,
-      "points": 4
-    },
-    "Uruguay": {
-      "status": "alive",
-      "reached": "group",
-      "group": "H",
-      "rank": 2,
-      "played": 2,
-      "won": 0,
-      "draw": 2,
-      "lost": 0,
-      "gf": 3,
-      "ga": 3,
-      "gd": 0,
-      "points": 2
+      "gd": 5,
+      "points": 7
     },
     "Cape Verde": {
       "status": "alive",
       "reached": "group",
       "group": "H",
-      "rank": 3,
-      "played": 2,
+      "rank": 2,
+      "played": 3,
       "won": 0,
-      "draw": 2,
+      "draw": 3,
       "lost": 0,
       "gf": 2,
       "ga": 2,
       "gd": 0,
+      "points": 3
+    },
+    "Uruguay": {
+      "status": "alive",
+      "reached": "group",
+      "group": "H",
+      "rank": 3,
+      "played": 3,
+      "won": 0,
+      "draw": 2,
+      "lost": 1,
+      "gf": 3,
+      "ga": 4,
+      "gd": -1,
       "points": 2
     },
     "Saudi Arabia": {
@@ -441,14 +441,14 @@
       "reached": "group",
       "group": "H",
       "rank": 4,
-      "played": 2,
+      "played": 3,
       "won": 0,
-      "draw": 1,
+      "draw": 2,
       "lost": 1,
       "gf": 1,
       "ga": 5,
       "gd": -4,
-      "points": 1
+      "points": 2
     },
     "France": {
       "status": "alive",
@@ -508,7 +508,7 @@
     },
     "Argentina": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "group",
       "group": "J",
       "rank": 1,
       "played": 2,
@@ -1302,9 +1302,9 @@
       "group": "H",
       "home": "Uruguay",
       "away": "Spain",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 1,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-27T00:00:00Z",
@@ -1312,9 +1312,9 @@
       "group": "H",
       "home": "Cape Verde",
       "away": "Saudi Arabia",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 0,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-27T03:00:00Z",
@@ -1322,9 +1322,9 @@
       "group": "G",
       "home": "New Zealand",
       "away": "Belgium",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 2,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-27T03:00:00Z",
@@ -1332,9 +1332,9 @@
       "group": "G",
       "home": "Egypt",
       "away": "Iran",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 1,
+      "as": 1,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-27T21:00:00Z",
@@ -1400,8 +1400,8 @@
       "date": "2026-06-28T19:00:00Z",
       "stage": "r32",
       "group": null,
-      "home": "South Africa",
-      "away": "Canada",
+      "home": "TBD",
+      "away": "TBD",
       "hs": null,
       "as": null,
       "status": "TIMED"
@@ -1410,8 +1410,8 @@
       "date": "2026-06-29T17:00:00Z",
       "stage": "r32",
       "group": null,
-      "home": "Brazil",
-      "away": "Japan",
+      "home": "TBD",
+      "away": "TBD",
       "hs": null,
       "as": null,
       "status": "TIMED"
@@ -1420,7 +1420,7 @@
       "date": "2026-06-29T20:30:00Z",
       "stage": "r32",
       "group": null,
-      "home": "Germany",
+      "home": "TBD",
       "away": "TBD",
       "hs": null,
       "as": null,
@@ -1430,8 +1430,8 @@
       "date": "2026-06-30T01:00:00Z",
       "stage": "r32",
       "group": null,
-      "home": "Netherlands",
-      "away": "Morocco",
+      "home": "TBD",
+      "away": "TBD",
       "hs": null,
       "as": null,
       "status": "TIMED"
@@ -1460,7 +1460,7 @@
       "date": "2026-07-01T01:00:00Z",
       "stage": "r32",
       "group": null,
-      "home": "Mexico",
+      "home": "TBD",
       "away": "TBD",
       "hs": null,
       "as": null,
@@ -1490,8 +1490,8 @@
       "date": "2026-07-02T00:00:00Z",
       "stage": "r32",
       "group": null,
-      "home": "USA",
-      "away": "Bosnia",
+      "home": "TBD",
+      "away": "TBD",
       "hs": null,
       "as": null,
       "status": "TIMED"
@@ -1520,7 +1520,7 @@
       "date": "2026-07-03T03:00:00Z",
       "stage": "r32",
       "group": null,
-      "home": "Switzerland",
+      "home": "TBD",
       "away": "TBD",
       "hs": null,
       "as": null,
@@ -1530,7 +1530,7 @@
       "date": "2026-07-03T18:00:00Z",
       "stage": "r32",
       "group": null,
-      "home": "Australia",
+      "home": "TBD",
       "away": "TBD",
       "hs": null,
       "as": null,
@@ -1540,7 +1540,7 @@
       "date": "2026-07-03T22:00:00Z",
       "stage": "r32",
       "group": null,
-      "home": "Argentina",
+      "home": "TBD",
       "away": "TBD",
       "hs": null,
       "as": null,
