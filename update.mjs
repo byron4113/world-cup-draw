@@ -144,6 +144,18 @@ async function main() {
 
   const matches = matchesData.matches || [];
 
+  // ---- Load the PREVIOUS data.json so we never regress on a flaky feed -------
+  // football-data sometimes blanks already-drawn knockout teams back to "TBD".
+  // We keep the previously-known matchup/progress rather than overwrite with TBD.
+  let prev = {};
+  try {
+    const { readFileSync } = await import("node:fs");
+    prev = JSON.parse(readFileSync(new URL("./data.json", import.meta.url), "utf8"));
+  } catch { /* first run / no file */ }
+  const prevTeams = prev.teams || {};
+  const prevFixByDate = {};
+  for (const f of prev.fixtures || []) if (f.date) prevFixByDate[f.date] = f;
+
   // ---- Build the team status map, seeded from the draw (everyone alive) -----
   // We list every team we know about from the fixtures.
   const teams = {}; // canonicalName -> { status, reached, group, played, ... }
@@ -291,18 +303,36 @@ async function main() {
     t.reached = "champion";
   }
 
+  // Don't let a flaky feed move an ALIVE team backwards — keep the deepest stage
+  // we've ever recorded (e.g. a best-third that briefly drops out of the feed).
+  const depth = (st) => (st === "champion" ? 99 : st === "group" ? 0 : KO_ORDER.indexOf(st) + 1);
+  for (const [name, t] of Object.entries(teams)) {
+    if (t.status !== "alive") continue;
+    const old = prevTeams[name];
+    if (old && depth(old.reached) > depth(t.reached)) t.reached = old.reached;
+  }
+
   // ---- Compact fixtures list for the "Matches" section ----------------------
   const fixtures = matches
-    .map((m) => ({
-      date: m.utcDate,
-      stage: STAGE_MAP[m.stage] || "group",
-      group: groupLetter(m.group),
-      home: m.homeTeam?.name ? canon(m.homeTeam.name) : "TBD",
-      away: m.awayTeam?.name ? canon(m.awayTeam.name) : "TBD",
-      hs: m.score?.fullTime?.home ?? null,
-      as: m.score?.fullTime?.away ?? null,
-      status: m.status,
-    }))
+    .map((m) => {
+      const date = m.utcDate;
+      let home = m.homeTeam?.name ? canon(m.homeTeam.name) : "TBD";
+      let away = m.awayTeam?.name ? canon(m.awayTeam.name) : "TBD";
+      // Sticky: if the feed blanks a matchup we already knew, keep the known names.
+      const old = prevFixByDate[date];
+      if (home === "TBD" && old && old.home && old.home !== "TBD") home = old.home;
+      if (away === "TBD" && old && old.away && old.away !== "TBD") away = old.away;
+      return {
+        date,
+        stage: STAGE_MAP[m.stage] || "group",
+        group: groupLetter(m.group),
+        home,
+        away,
+        hs: m.score?.fullTime?.home ?? null,
+        as: m.score?.fullTime?.away ?? null,
+        status: m.status,
+      };
+    })
     .sort((a, b) => new Date(a.date) - new Date(b.date));
 
   const out = {
