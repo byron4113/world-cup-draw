@@ -245,6 +245,25 @@ async function main() {
     }
   }
 
+  // Early qualification (mirror of the above): once a group is finished, its top 2
+  // are definitely into the R32 (top 2 always advance, regardless of best-thirds).
+  // Bulletproof: only when a team has <=1 team above it AND nobody level on points,
+  // so there's no tiebreak guesswork. Lets qualified teams show "into R32" before
+  // the feed fills in their (TBD) opponent.
+  for (const [gl, g] of Object.entries(byGroup)) {
+    if (g.length < 4 || !groupFinished(gl)) continue;
+    for (const t of g) {
+      if (t.status !== "alive" || t.reached !== "group") continue;
+      // Teams that could possibly finish above t = those with more points, plus
+      // those level (a tie could go either way). If at most ONE can be above t,
+      // then t is guaranteed top 2 → through. (Two teams tied for 1st/2nd both
+      // qualify; a team tied for 2nd/3rd does not get marked.)
+      const above = g.filter((o) => (o.points || 0) > (t.points || 0)).length;
+      const level = g.filter((o) => o !== t && (o.points || 0) === (t.points || 0)).length;
+      if (above + level <= 1) t.reached = "r32";
+    }
+  }
+
   // Group eliminations via the bracket — but ONLY once the FULL Round of 32 is
   // populated (all 16 matches have both real teams). This prevents a partial or
   // glitchy feed (e.g. only a few teams assigned) from wrongly marking everyone out.
