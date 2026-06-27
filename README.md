@@ -1,7 +1,7 @@
 # World Cup 2026 — Family Draw 🏆
 
 A tiny website showing Mom, Byron, and Melissa's teams, who's still in, who's
-ahead, and upcoming matches. Updates itself twice a day. Free to host.
+ahead, and upcoming matches. Updates itself automatically. Free to host.
 
 Just want to share it? → see **Setup** below. Then send everyone the link.
 
@@ -12,7 +12,7 @@ Just want to share it? → see **Setup** below. Then send everyone the link.
 - `data.json` — the live results. **Written automatically — don't edit by hand.**
 - `update.mjs` — fetches results from [football-data.org](https://www.football-data.org)
   and rewrites `data.json`.
-- `.github/workflows/update.yml` — runs `update.mjs` twice a day on GitHub's servers.
+- `.github/workflows/update.yml` — runs `update.mjs` every hour on GitHub's servers.
 
 "Who's still in" is taken from the **real** results: group positions come from
 football-data's official standings, and knockouts from the actual bracket
@@ -49,8 +49,9 @@ No guesswork.
    `main`, folder `/ (root)`. Save.
 2. Wait ~1 minute. Your link is `https://<your-username>.github.io/world-cup-draw/`.
 
-That's it. The site refreshes itself at 07:00 and 19:00 UTC every day. You can
-also hit **Run workflow** any time to update on demand.
+That's it. The updater is scheduled hourly (GitHub silently skips some scheduled
+runs, which is fine — enough land). You can also hit **Run workflow** any time to
+update on demand.
 
 ## Running it locally (optional)
 
