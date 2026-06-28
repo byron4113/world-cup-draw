@@ -303,13 +303,19 @@ async function main() {
     t.reached = "champion";
   }
 
-  // Don't let a flaky feed move an ALIVE team backwards — keep the deepest stage
-  // we've ever recorded (e.g. a best-third that briefly drops out of the feed).
+  // Stickiness against a flaky feed (it sometimes drops back to a partial bracket):
+  //  - Once a team is OUT it stays OUT — teams never un-eliminate.
+  //  - An ALIVE team never moves backwards — keep the deepest stage ever recorded.
   const depth = (st) => (st === "champion" ? 99 : st === "group" ? 0 : KO_ORDER.indexOf(st) + 1);
   for (const [name, t] of Object.entries(teams)) {
-    if (t.status !== "alive") continue;
     const old = prevTeams[name];
-    if (old && depth(old.reached) > depth(t.reached)) t.reached = old.reached;
+    if (!old) continue;
+    if (old.status === "out" && t.status !== "out") {
+      t.status = "out";
+      t.reached = old.reached; // keep the stage they were knocked out at
+    } else if (t.status === "alive" && depth(old.reached) > depth(t.reached)) {
+      t.reached = old.reached;
+    }
   }
 
   // ---- Compact fixtures list for the "Matches" section ----------------------
