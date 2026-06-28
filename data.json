@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T19:48:46.148Z",
+  "lastUpdated": "2026-06-28T21:31:12.115Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -17,7 +17,7 @@
       "points": 9
     },
     "South Africa": {
-      "status": "alive",
+      "status": "out",
       "reached": "r32",
       "group": "A",
       "rank": 2,
@@ -1403,8 +1403,8 @@
       "home": "South Africa",
       "away": "Canada",
       "hs": 0,
-      "as": 0,
-      "status": "IN_PLAY"
+      "as": 1,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-29T17:00:00Z",
