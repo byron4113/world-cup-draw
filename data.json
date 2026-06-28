@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T23:18:15.798Z",
+  "lastUpdated": "2026-06-28T00:16:33.894Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -567,56 +567,56 @@
       "reached": "group",
       "group": "K",
       "rank": 1,
-      "played": 2,
+      "played": 3,
       "won": 2,
-      "draw": 0,
+      "draw": 1,
       "lost": 0,
       "gf": 4,
       "ga": 1,
       "gd": 3,
-      "points": 6
+      "points": 7
     },
     "Portugal": {
       "status": "alive",
       "reached": "group",
       "group": "K",
       "rank": 2,
-      "played": 2,
+      "played": 3,
       "won": 1,
-      "draw": 1,
+      "draw": 2,
       "lost": 0,
       "gf": 6,
       "ga": 1,
       "gd": 5,
-      "points": 4
-    },
-    "DR Congo": {
-      "status": "alive",
-      "reached": "group",
-      "group": "K",
-      "rank": 3,
-      "played": 2,
-      "won": 0,
-      "draw": 1,
-      "lost": 1,
-      "gf": 1,
-      "ga": 2,
-      "gd": -1,
-      "points": 1
+      "points": 5
     },
     "Uzbekistan": {
       "status": "alive",
       "reached": "group",
       "group": "K",
-      "rank": 4,
-      "played": 2,
-      "won": 0,
+      "rank": 3,
+      "played": 3,
+      "won": 1,
       "draw": 0,
       "lost": 2,
-      "gf": 1,
+      "gf": 2,
       "ga": 8,
-      "gd": -7,
-      "points": 0
+      "gd": -6,
+      "points": 3
+    },
+    "DR Congo": {
+      "status": "alive",
+      "reached": "group",
+      "group": "K",
+      "rank": 4,
+      "played": 3,
+      "won": 0,
+      "draw": 1,
+      "lost": 2,
+      "gf": 1,
+      "ga": 3,
+      "gd": -2,
+      "points": 1
     },
     "England": {
       "status": "alive",
@@ -1362,9 +1362,9 @@
       "group": "K",
       "home": "Colombia",
       "away": "Portugal",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 0,
+      "status": "LIVE"
     },
     {
       "date": "2026-06-27T23:30:00Z",
@@ -1372,9 +1372,9 @@
       "group": "K",
       "home": "DR Congo",
       "away": "Uzbekistan",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 1,
+      "as": 1,
+      "status": "LIVE"
     },
     {
       "date": "2026-06-28T02:00:00Z",
