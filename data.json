@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T18:19:20.328Z",
+  "lastUpdated": "2026-06-28T19:48:46.148Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -1402,9 +1402,9 @@
       "group": null,
       "home": "South Africa",
       "away": "Canada",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 0,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-29T17:00:00Z",
