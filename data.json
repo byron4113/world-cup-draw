@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T19:04:52.377Z",
+  "lastUpdated": "2026-06-29T19:09:14.174Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -116,7 +116,7 @@
     },
     "Brazil": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "r16",
       "group": "C",
       "rank": 1,
       "played": 3,
@@ -297,7 +297,7 @@
       "points": 7
     },
     "Japan": {
-      "status": "alive",
+      "status": "out",
       "reached": "r32",
       "group": "F",
       "rank": 2,
@@ -1414,7 +1414,7 @@
       "away": "Japan",
       "hs": 2,
       "as": 1,
-      "status": "IN_PLAY"
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-29T20:30:00Z",
