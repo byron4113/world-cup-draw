@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T21:45:28.768Z",
+  "lastUpdated": "2026-06-29T23:17:50.841Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -1422,9 +1422,9 @@
       "group": null,
       "home": "Germany",
       "away": "Paraguay",
-      "hs": 0,
+      "hs": 2,
       "as": 1,
-      "status": "IN_PLAY"
+      "status": "PAUSED"
     },
     {
       "date": "2026-06-30T01:00:00Z",
