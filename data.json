@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T05:01:42.427Z",
+  "lastUpdated": "2026-06-29T06:29:24.914Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -74,7 +74,7 @@
     },
     "Canada": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "r16",
       "group": "B",
       "rank": 2,
       "played": 3,
@@ -1560,7 +1560,7 @@
       "date": "2026-07-04T17:00:00Z",
       "stage": "r16",
       "group": null,
-      "home": "TBD",
+      "home": "Canada",
       "away": "TBD",
       "hs": null,
       "as": null,

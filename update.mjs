@@ -217,15 +217,28 @@ async function main() {
     }
   }
 
-  // Knockout eliminations: the loser of a finished KO match is out.
+  // How "deep" a stage is, used to advance/never-downgrade a team's progress.
+  const depth = (st) => (st === "champion" ? 99 : st === "group" ? 0 : KO_ORDER.indexOf(st) + 1);
+
+  // Knockout results: the loser is OUT; the winner advances to the NEXT stage
+  // (e.g. winning an R32 match means "into the R16", even before the next
+  // fixture's opponent is known).
   for (const m of koFinished) {
     const w = winnerOf(m);
     if (!w) continue;
     const loser = w === "home" ? m._away : m._home;
-    if (!loser) continue;
-    const t = ensure(loser);
-    t.status = "out";
-    t.reached = m._stage; // they got knocked out at this stage
+    const winner = w === "home" ? m._home : m._away;
+    if (loser) {
+      const t = ensure(loser);
+      t.status = "out";
+      t.reached = m._stage; // they got knocked out at this stage
+    }
+    if (winner) {
+      const t = ensure(winner);
+      const i = KO_ORDER.indexOf(m._stage);
+      const next = i >= 0 && i + 1 < KO_ORDER.length ? KO_ORDER[i + 1] : "champion";
+      if (depth(next) > depth(t.reached)) t.reached = next;
+    }
   }
 
   // Early group elimination (bulletproof, no tiebreak guesswork):
@@ -306,7 +319,6 @@ async function main() {
   // Stickiness against a flaky feed (it sometimes drops back to a partial bracket):
   //  - Once a team is OUT it stays OUT — teams never un-eliminate.
   //  - An ALIVE team never moves backwards — keep the deepest stage ever recorded.
-  const depth = (st) => (st === "champion" ? 99 : st === "group" ? 0 : KO_ORDER.indexOf(st) + 1);
   for (const [name, t] of Object.entries(teams)) {
     const old = prevTeams[name];
     if (!old) continue;
