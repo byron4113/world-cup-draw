@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T17:49:09.365Z",
+  "lastUpdated": "2026-06-29T19:04:52.377Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -1412,7 +1412,7 @@
       "group": null,
       "home": "Brazil",
       "away": "Japan",
-      "hs": 0,
+      "hs": 2,
       "as": 1,
       "status": "IN_PLAY"
     },
