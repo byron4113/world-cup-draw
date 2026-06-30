@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T23:17:50.841Z",
+  "lastUpdated": "2026-06-30T01:26:40.020Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -200,7 +200,7 @@
     },
     "Paraguay": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "r16",
       "group": "D",
       "rank": 3,
       "played": 3,
@@ -227,7 +227,7 @@
       "points": 3
     },
     "Germany": {
-      "status": "alive",
+      "status": "out",
       "reached": "r32",
       "group": "E",
       "rank": 1,
@@ -1422,9 +1422,9 @@
       "group": null,
       "home": "Germany",
       "away": "Paraguay",
-      "hs": 2,
-      "as": 1,
-      "status": "PAUSED"
+      "hs": 4,
+      "as": 5,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-30T01:00:00Z",
@@ -1432,9 +1432,9 @@
       "group": null,
       "home": "Netherlands",
       "away": "Morocco",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 0,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-06-30T17:00:00Z",
