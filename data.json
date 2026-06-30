@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T01:26:40.020Z",
+  "lastUpdated": "2026-06-30T06:34:03.001Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -130,7 +130,7 @@
     },
     "Morocco": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "r16",
       "group": "C",
       "rank": 2,
       "played": 3,
@@ -283,7 +283,7 @@
       "points": 1
     },
     "Netherlands": {
-      "status": "alive",
+      "status": "out",
       "reached": "r32",
       "group": "F",
       "rank": 1,
@@ -1432,9 +1432,9 @@
       "group": null,
       "home": "Netherlands",
       "away": "Morocco",
-      "hs": 0,
-      "as": 0,
-      "status": "IN_PLAY"
+      "hs": 3,
+      "as": 4,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-30T17:00:00Z",
@@ -1561,7 +1561,7 @@
       "stage": "r16",
       "group": null,
       "home": "Canada",
-      "away": "TBD",
+      "away": "Morocco",
       "hs": null,
       "as": null,
       "status": "TIMED"
@@ -1570,7 +1570,7 @@
       "date": "2026-07-04T21:00:00Z",
       "stage": "r16",
       "group": null,
-      "home": "TBD",
+      "home": "Paraguay",
       "away": "TBD",
       "hs": null,
       "as": null,
@@ -1580,7 +1580,7 @@
       "date": "2026-07-05T20:00:00Z",
       "stage": "r16",
       "group": null,
-      "home": "TBD",
+      "home": "Brazil",
       "away": "TBD",
       "hs": null,
       "as": null,
