@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T18:16:10.507Z",
+  "lastUpdated": "2026-06-30T20:21:10.544Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -241,7 +241,7 @@
       "points": 6
     },
     "Ivory Coast": {
-      "status": "alive",
+      "status": "out",
       "reached": "r32",
       "group": "E",
       "rank": 2,
@@ -466,7 +466,7 @@
     },
     "Norway": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "r16",
       "group": "I",
       "rank": 2,
       "played": 3,
@@ -1442,9 +1442,9 @@
       "group": null,
       "home": "Ivory Coast",
       "away": "Norway",
-      "hs": 0,
-      "as": 1,
-      "status": "IN_PLAY"
+      "hs": 1,
+      "as": 2,
+      "status": "FINISHED"
     },
     {
       "date": "2026-06-30T21:00:00Z",
