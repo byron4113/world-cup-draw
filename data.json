@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T04:32:39.712Z",
+  "lastUpdated": "2026-07-02T08:25:58.215Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -1590,8 +1590,8 @@
       "date": "2026-07-06T00:00:00Z",
       "stage": "r16",
       "group": null,
-      "home": "TBD",
-      "away": "TBD",
+      "home": "Mexico",
+      "away": "England",
       "hs": null,
       "as": null,
       "status": "TIMED"
@@ -1610,8 +1610,8 @@
       "date": "2026-07-07T00:00:00Z",
       "stage": "r16",
       "group": null,
-      "home": "TBD",
-      "away": "TBD",
+      "home": "USA",
+      "away": "Belgium",
       "hs": null,
       "as": null,
       "status": "TIMED"
