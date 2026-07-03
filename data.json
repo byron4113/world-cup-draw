@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T04:59:42.878Z",
+  "lastUpdated": "2026-07-03T05:52:43.901Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -60,7 +60,7 @@
     },
     "Switzerland": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "r16",
       "group": "B",
       "rank": 1,
       "played": 3,
@@ -535,7 +535,7 @@
       "points": 4
     },
     "Algeria": {
-      "status": "alive",
+      "status": "out",
       "reached": "r32",
       "group": "J",
       "rank": 3,
@@ -1524,7 +1524,7 @@
       "away": "Algeria",
       "hs": 2,
       "as": 0,
-      "status": "IN_PLAY"
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-03T18:00:00Z",
