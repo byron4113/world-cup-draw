@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T01:04:11.556Z",
+  "lastUpdated": "2026-07-03T04:59:42.878Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -578,7 +578,7 @@
     },
     "Portugal": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "r16",
       "group": "K",
       "rank": 2,
       "played": 3,
@@ -633,7 +633,7 @@
       "points": 7
     },
     "Croatia": {
-      "status": "alive",
+      "status": "out",
       "reached": "r32",
       "group": "L",
       "rank": 2,
@@ -1514,7 +1514,7 @@
       "away": "Croatia",
       "hs": 2,
       "as": 1,
-      "status": "IN_PLAY"
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-03T03:00:00Z",
@@ -1522,9 +1522,9 @@
       "group": null,
       "home": "Switzerland",
       "away": "Algeria",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 2,
+      "as": 0,
+      "status": "IN_PLAY"
     },
     {
       "date": "2026-07-03T18:00:00Z",
