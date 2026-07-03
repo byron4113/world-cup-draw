@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T22:17:31.311Z",
+  "lastUpdated": "2026-07-03T23:28:37.828Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -1542,8 +1542,8 @@
       "group": null,
       "home": "Argentina",
       "away": "Cape Verde",
-      "hs": 0,
-      "as": 0,
+      "hs": 1,
+      "as": 1,
       "status": "IN_PLAY"
     },
     {
