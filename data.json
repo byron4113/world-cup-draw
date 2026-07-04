@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T22:13:34.779Z",
+  "lastUpdated": "2026-07-04T23:15:09.229Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -199,7 +199,7 @@
       "points": 4
     },
     "Paraguay": {
-      "status": "alive",
+      "status": "out",
       "reached": "r16",
       "group": "D",
       "rank": 3,
@@ -452,7 +452,7 @@
     },
     "France": {
       "status": "alive",
-      "reached": "r16",
+      "reached": "qf",
       "group": "I",
       "rank": 1,
       "played": 3,
@@ -1573,8 +1573,8 @@
       "home": "Paraguay",
       "away": "France",
       "hs": 0,
-      "as": 0,
-      "status": "PAUSED"
+      "as": 1,
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-05T20:00:00Z",
