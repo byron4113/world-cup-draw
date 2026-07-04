@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T23:28:37.828Z",
+  "lastUpdated": "2026-07-04T04:04:28.124Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -409,7 +409,7 @@
       "points": 7
     },
     "Cape Verde": {
-      "status": "alive",
+      "status": "out",
       "reached": "r32",
       "group": "H",
       "rank": 2,
@@ -508,7 +508,7 @@
     },
     "Argentina": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "r16",
       "group": "J",
       "rank": 1,
       "played": 3,
@@ -564,7 +564,7 @@
     },
     "Colombia": {
       "status": "alive",
-      "reached": "r32",
+      "reached": "r16",
       "group": "K",
       "rank": 1,
       "played": 3,
@@ -647,7 +647,7 @@
       "points": 6
     },
     "Ghana": {
-      "status": "alive",
+      "status": "out",
       "reached": "r32",
       "group": "L",
       "rank": 3,
@@ -1542,9 +1542,9 @@
       "group": null,
       "home": "Argentina",
       "away": "Cape Verde",
-      "hs": 1,
-      "as": 1,
-      "status": "IN_PLAY"
+      "hs": 3,
+      "as": 2,
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-04T01:30:00Z",
@@ -1552,9 +1552,9 @@
       "group": null,
       "home": "Colombia",
       "away": "Ghana",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 1,
+      "as": 0,
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-04T17:00:00Z",
