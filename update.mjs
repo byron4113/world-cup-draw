@@ -337,9 +337,10 @@ async function main() {
       let home = m.homeTeam?.name ? canon(m.homeTeam.name) : "TBD";
       let away = m.awayTeam?.name ? canon(m.awayTeam.name) : "TBD";
       // Sticky: if the feed blanks a matchup we already knew, keep the known names.
+      // (But not names WE derived — those are recomputed fresh below each run.)
       const old = prevFixByDate[date];
-      if (home === "TBD" && old && old.home && old.home !== "TBD") home = old.home;
-      if (away === "TBD" && old && old.away && old.away !== "TBD") away = old.away;
+      if (home === "TBD" && old && old.home && old.home !== "TBD" && !old.derived) home = old.home;
+      if (away === "TBD" && old && old.away && old.away !== "TBD" && !old.derived) away = old.away;
       return {
         date,
         stage: STAGE_MAP[m.stage] || "group",
@@ -352,6 +353,56 @@ async function main() {
       };
     })
     .sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  // ---- Fill knockout matchups the feed hasn't linked yet --------------------
+  // football-data frequently lags on advancing winners into the next round.
+  // Verified rule: within a knockout round, matches sorted by id are in bracket
+  // order, and consecutive pairs' winners form the next round's matchups. So we
+  // fill any TBD next-round slot the moment BOTH its feeder games are finished.
+  // Feed-provided matchups always win (they override these via stickiness); the
+  // ones we derive are flagged so they're recomputed fresh every run.
+  const rawByStage = {};
+  for (const m of matches) {
+    const st = STAGE_MAP[m.stage] || "group";
+    (rawByStage[st] = rawByStage[st] || []).push(m);
+  }
+  for (const st in rawByStage) rawByStage[st].sort((a, b) => a.id - b.id);
+  const rawWinner = (m) => {
+    if (m.status !== "FINISHED") return null;
+    const w = winnerOf(m);
+    if (!w) return null;
+    const t = w === "home" ? m.homeTeam : m.awayTeam;
+    return t?.name ? canon(t.name) : null;
+  };
+  const key = (a, b) => [a, b].sort().join("|");
+  const ROUNDS = ["r32", "r16", "qf", "sf", "final"];
+  for (let i = 0; i < ROUNDS.length - 1; i++) {
+    const feeders = rawByStage[ROUNDS[i]] || [];
+    const targetCode = ROUNDS[i + 1];
+    // bracket-order matchups where BOTH winners are known
+    const derived = [];
+    for (let k = 0; k * 2 + 1 < feeders.length; k++) {
+      const a = rawWinner(feeders[2 * k]);
+      const b = rawWinner(feeders[2 * k + 1]);
+      if (a && b) derived.push([a, b]);
+    }
+    if (!derived.length) continue;
+    const targetFx = fixtures
+      .filter((f) => f.stage === targetCode)
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
+    // matchups already shown by the feed — don't duplicate them
+    const shown = new Set(
+      targetFx.filter((f) => f.home !== "TBD" && f.away !== "TBD").map((f) => key(f.home, f.away))
+    );
+    const remaining = derived.filter((d) => !shown.has(key(d[0], d[1])));
+    // fill the still-blank slots (date order) with the remaining matchups
+    const blanks = targetFx.filter((f) => f.home === "TBD" && f.away === "TBD");
+    for (let j = 0; j < blanks.length && j < remaining.length; j++) {
+      blanks[j].home = remaining[j][0];
+      blanks[j].away = remaining[j][1];
+      blanks[j].derived = true;
+    }
+  }
 
   const out = {
     lastUpdated: new Date().toISOString(),
