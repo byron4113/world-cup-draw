@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T21:28:56.870Z",
+  "lastUpdated": "2026-07-05T23:29:28.254Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -115,7 +115,7 @@
       "points": 1
     },
     "Brazil": {
-      "status": "alive",
+      "status": "out",
       "reached": "r16",
       "group": "C",
       "rank": 1,
@@ -466,7 +466,7 @@
     },
     "Norway": {
       "status": "alive",
-      "reached": "r16",
+      "reached": "qf",
       "group": "I",
       "rank": 2,
       "played": 3,
@@ -1582,9 +1582,9 @@
       "group": null,
       "home": "Brazil",
       "away": "Norway",
-      "hs": 0,
-      "as": 0,
-      "status": "LIVE"
+      "hs": 1,
+      "as": 2,
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-06T00:00:00Z",
