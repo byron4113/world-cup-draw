@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T16:31:11.340Z",
+  "lastUpdated": "2026-07-06T19:07:36.353Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -1602,9 +1602,9 @@
       "group": null,
       "home": "Portugal",
       "away": "Spain",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 0,
+      "as": 0,
+      "status": "LIVE"
     },
     {
       "date": "2026-07-07T00:00:00Z",
