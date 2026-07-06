@@ -366,7 +366,7 @@ function renderFixtures(fixtures) {
       ? STAGES[f.stage]?.short || f.stage
       : playing
       ? `<span class="live-dot">● LIVE</span>`
-      : fmt(f.date);
+      : `${STAGES[f.stage]?.short || f.stage}<br>${fmt(f.date)}`;
     return `
       <div class="fixture ${done ? "done" : ""} ${playing ? "live" : ""}">
         <div class="fx-when">${when}</div>
