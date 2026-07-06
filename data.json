@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T21:02:28.818Z",
+  "lastUpdated": "2026-07-06T21:06:57.637Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -396,7 +396,7 @@
     },
     "Spain": {
       "status": "alive",
-      "reached": "r16",
+      "reached": "qf",
       "group": "H",
       "rank": 1,
       "played": 3,
@@ -577,7 +577,7 @@
       "points": 7
     },
     "Portugal": {
-      "status": "alive",
+      "status": "out",
       "reached": "r16",
       "group": "K",
       "rank": 2,
@@ -1604,7 +1604,7 @@
       "away": "Spain",
       "hs": 0,
       "as": 1,
-      "status": "IN_PLAY"
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-07T00:00:00Z",
