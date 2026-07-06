@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-07-05T23:29:28.254Z",
+  "lastUpdated": "2026-07-06T04:41:52.393Z",
   "champion": null,
   "teams": {
     "Mexico": {
-      "status": "alive",
+      "status": "out",
       "reached": "r16",
       "group": "A",
       "rank": 1,
@@ -620,7 +620,7 @@
     },
     "England": {
       "status": "alive",
-      "reached": "r16",
+      "reached": "qf",
       "group": "L",
       "rank": 1,
       "played": 3,
@@ -1587,14 +1587,14 @@
       "status": "FINISHED"
     },
     {
-      "date": "2026-07-06T00:00:00Z",
+      "date": "2026-07-06T01:00:00Z",
       "stage": "r16",
       "group": null,
       "home": "Mexico",
       "away": "England",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 2,
+      "as": 3,
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-06T19:00:00Z",
@@ -1650,11 +1650,12 @@
       "date": "2026-07-10T19:00:00Z",
       "stage": "qf",
       "group": null,
-      "home": "TBD",
-      "away": "TBD",
+      "home": "Norway",
+      "away": "England",
       "hs": null,
       "as": null,
-      "status": "TIMED"
+      "status": "TIMED",
+      "derived": true
     },
     {
       "date": "2026-07-11T21:00:00Z",
