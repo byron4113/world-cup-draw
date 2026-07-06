@@ -159,6 +159,7 @@ main { max-width: 1000px; margin: 0 auto; padding: 0 18px 60px; }
 .fx-name { white-space: nowrap; }
 .fixture.live { border-color: var(--red); box-shadow: 3px 3px 0 var(--red); }
 .fx-when { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: #6a6356; }
+.fx-round { font-weight: 800; color: var(--ink); }
 .fx-team { display: flex; align-items: center; gap: 8px; font-weight: 600; }
 .fx-team.home { justify-content: flex-start; }
 .fx-team.away { justify-content: flex-end; }
