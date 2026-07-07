@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T05:09:18.592Z",
+  "lastUpdated": "2026-07-07T08:45:17.962Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -1654,8 +1654,7 @@
       "away": "Belgium",
       "hs": null,
       "as": null,
-      "status": "TIMED",
-      "derived": true
+      "status": "TIMED"
     },
     {
       "date": "2026-07-11T21:00:00Z",
