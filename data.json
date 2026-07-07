@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T17:26:59.578Z",
+  "lastUpdated": "2026-07-07T18:12:12.263Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -353,7 +353,7 @@
       "points": 5
     },
     "Egypt": {
-      "status": "alive",
+      "status": "out",
       "reached": "r16",
       "group": "G",
       "rank": 2,
@@ -508,7 +508,7 @@
     },
     "Argentina": {
       "status": "alive",
-      "reached": "r16",
+      "reached": "qf",
       "group": "J",
       "rank": 1,
       "played": 3,
@@ -1622,9 +1622,9 @@
       "group": null,
       "home": "Argentina",
       "away": "Egypt",
-      "hs": 0,
-      "as": 1,
-      "status": "IN_PLAY"
+      "hs": 3,
+      "as": 2,
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-07T20:00:00Z",
