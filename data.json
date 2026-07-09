@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-09T20:57:33.674Z",
+  "lastUpdated": "2026-07-09T22:23:56.501Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -129,7 +129,7 @@
       "points": 7
     },
     "Morocco": {
-      "status": "alive",
+      "status": "out",
       "reached": "qf",
       "group": "C",
       "rank": 2,
@@ -452,7 +452,7 @@
     },
     "France": {
       "status": "alive",
-      "reached": "qf",
+      "reached": "sf",
       "group": "I",
       "rank": 1,
       "played": 3,
@@ -1642,9 +1642,9 @@
       "group": null,
       "home": "France",
       "away": "Morocco",
-      "hs": 0,
+      "hs": 2,
       "as": 0,
-      "status": "PAUSED"
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-10T19:00:00Z",
