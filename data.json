@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-10T20:44:30.778Z",
+  "lastUpdated": "2026-07-10T22:18:18.395Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -339,7 +339,7 @@
       "points": 0
     },
     "Belgium": {
-      "status": "alive",
+      "status": "out",
       "reached": "qf",
       "group": "G",
       "rank": 1,
@@ -396,7 +396,7 @@
     },
     "Spain": {
       "status": "alive",
-      "reached": "qf",
+      "reached": "sf",
       "group": "H",
       "rank": 1,
       "played": 3,
@@ -1652,9 +1652,9 @@
       "group": null,
       "home": "Spain",
       "away": "Belgium",
-      "hs": 1,
+      "hs": 2,
       "as": 1,
-      "status": "IN_PLAY"
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-11T21:00:00Z",
@@ -1690,11 +1690,12 @@
       "date": "2026-07-15T19:00:00Z",
       "stage": "sf",
       "group": null,
-      "home": "TBD",
-      "away": "TBD",
+      "home": "France",
+      "away": "Spain",
       "hs": null,
       "as": null,
-      "status": "TIMED"
+      "status": "TIMED",
+      "derived": true
     },
     {
       "date": "2026-07-18T21:00:00Z",
