@@ -144,6 +144,22 @@ async function main() {
 
   const matches = matchesData.matches || [];
 
+  // ---- Sanitise malformed statuses ------------------------------------------
+  // The feed occasionally returns a garbage status (e.g. a timestamp string)
+  // instead of a real one. If a match has a full-time score it's finished;
+  // otherwise treat it as not-yet-played. Fixes a played game showing as
+  // "upcoming" (and its loser not being marked out).
+  const VALID_STATUS = new Set([
+    "SCHEDULED", "TIMED", "IN_PLAY", "PAUSED", "SUSPENDED",
+    "POSTPONED", "CANCELLED", "AWARDED", "FINISHED",
+  ]);
+  for (const m of matches) {
+    if (!VALID_STATUS.has(m.status)) {
+      const ft = m.score?.fullTime;
+      m.status = ft && ft.home != null && ft.away != null ? "FINISHED" : "SCHEDULED";
+    }
+  }
+
   // ---- Load the PREVIOUS data.json so we never regress on a flaky feed -------
   // football-data sometimes blanks already-drawn knockout teams back to "TBD".
   // We keep the previously-known matchup/progress rather than overwrite with TBD.

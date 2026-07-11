@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T23:52:47.064Z",
+  "lastUpdated": "2026-07-11T23:54:30.273Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -465,7 +465,7 @@
       "points": 9
     },
     "Norway": {
-      "status": "alive",
+      "status": "out",
       "reached": "qf",
       "group": "I",
       "rank": 2,
@@ -620,7 +620,7 @@
     },
     "England": {
       "status": "alive",
-      "reached": "qf",
+      "reached": "sf",
       "group": "L",
       "rank": 1,
       "played": 3,
@@ -1594,7 +1594,7 @@
       "away": "England",
       "hs": 2,
       "as": 3,
-      "status": "2026-07-06 01:00:00Z"
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-06T19:00:00Z",
@@ -1664,7 +1664,7 @@
       "away": "England",
       "hs": 1,
       "as": 2,
-      "status": "PAUSED"
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-12T01:00:00Z",
