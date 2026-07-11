@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T03:45:03.953Z",
+  "lastUpdated": "2026-07-11T06:27:57.402Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -1681,7 +1681,7 @@
       "stage": "sf",
       "group": null,
       "home": "France",
-      "away": "TBD",
+      "away": "Spain",
       "hs": null,
       "as": null,
       "status": "TIMED"
@@ -1690,12 +1690,11 @@
       "date": "2026-07-15T19:00:00Z",
       "stage": "sf",
       "group": null,
-      "home": "France",
-      "away": "Spain",
+      "home": "TBD",
+      "away": "TBD",
       "hs": null,
       "as": null,
-      "status": "TIMED",
-      "derived": true
+      "status": "TIMED"
     },
     {
       "date": "2026-07-18T21:00:00Z",
