@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-12T00:12:36.211Z",
+  "lastUpdated": "2026-07-12T04:00:26.833Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -59,7 +59,7 @@
       "points": 1
     },
     "Switzerland": {
-      "status": "alive",
+      "status": "out",
       "reached": "qf",
       "group": "B",
       "rank": 1,
@@ -508,7 +508,7 @@
     },
     "Argentina": {
       "status": "alive",
-      "reached": "qf",
+      "reached": "sf",
       "group": "J",
       "rank": 1,
       "played": 3,
@@ -1672,9 +1672,9 @@
       "group": null,
       "home": "Argentina",
       "away": "Switzerland",
-      "hs": null,
-      "as": null,
-      "status": "TIMED"
+      "hs": 3,
+      "as": 1,
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-14T19:00:00Z",
@@ -1690,11 +1690,12 @@
       "date": "2026-07-15T19:00:00Z",
       "stage": "sf",
       "group": null,
-      "home": "TBD",
-      "away": "TBD",
+      "home": "England",
+      "away": "Argentina",
       "hs": null,
       "as": null,
-      "status": "TIMED"
+      "status": "TIMED",
+      "derived": true
     },
     {
       "date": "2026-07-18T21:00:00Z",
