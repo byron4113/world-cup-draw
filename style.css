@@ -67,6 +67,25 @@ main { max-width: 1000px; margin: 0 auto; padding: 0 18px 60px; }
   box-shadow: 3px 3px 0 var(--ink);
 }
 .banner strong { color: var(--red); }
+/* Finals: build-up spotlight + champion crowning */
+.banner-final, .banner-champ {
+  font-size: 1rem; line-height: 1.4; max-width: 90%;
+}
+.banner-champ {
+  background: var(--gold); border-color: var(--ink);
+  animation: champ-pulse 1.3s ease-in-out infinite;
+}
+.banner-champ strong { color: var(--ink); }
+@keyframes champ-pulse {
+  0%, 100% { box-shadow: 3px 3px 0 var(--ink); transform: scale(1); }
+  50% { box-shadow: 3px 3px 0 var(--ink), 0 0 24px 4px rgba(255, 206, 50, 0.7); transform: scale(1.03); }
+}
+/* winning player's podium card keeps a gold glow */
+.podium-card.is-champion { animation: card-glow 1.5s ease-in-out infinite; }
+@keyframes card-glow {
+  0%, 100% { box-shadow: 4px 4px 0 var(--gold); }
+  50% { box-shadow: 4px 4px 0 var(--gold), 0 0 22px 6px rgba(255, 206, 50, 0.55); }
+}
 
 /* ---- Section titles ---- */
 .block { margin-top: 38px; }

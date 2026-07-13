@@ -152,6 +152,45 @@ function render(live) {
   renderRosters(teams);
   renderFixtures(live.fixtures || []);
   renderFooter(live);
+  if (live.champion) celebrate(); // 🎉 someone won the draw
+}
+
+// --- Champion celebration: confetti (no dependencies) -----------------------
+let confettiFired = false;
+function celebrate() {
+  if (confettiFired) return;
+  confettiFired = true;
+  const canvas = document.createElement("canvas");
+  canvas.style.cssText = "position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9999";
+  document.body.appendChild(canvas);
+  const ctx = canvas.getContext("2d");
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const resize = () => { canvas.width = innerWidth * dpr; canvas.height = innerHeight * dpr; };
+  resize(); window.addEventListener("resize", resize);
+  const colors = ["#ffce32", "#e63972", "#2563eb", "#d6480b", "#ffffff", "#0b6e3b"];
+  const N = 180;
+  const bits = Array.from({ length: N }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * -canvas.height,
+    r: (4 + Math.random() * 6) * dpr,
+    col: colors[(Math.random() * colors.length) | 0],
+    vy: (2 + Math.random() * 3.5) * dpr,
+    vx: (-1.2 + Math.random() * 2.4) * dpr,
+    rot: Math.random() * 6.28,
+    vr: -0.15 + Math.random() * 0.3,
+  }));
+  const start = Date.now();
+  (function frame() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const p of bits) {
+      p.y += p.vy; p.x += p.vx; p.rot += p.vr;
+      if (p.y > canvas.height + 20) { p.y = -20; p.x = Math.random() * canvas.width; }
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+      ctx.fillStyle = p.col; ctx.fillRect(-p.r / 2, -p.r / 2, p.r, p.r * 1.6); ctx.restore();
+    }
+    if (Date.now() - start < 10000) requestAnimationFrame(frame);
+    else canvas.remove();
+  })();
 }
 
 // --- Tournament progress stepper --------------------------------------------
@@ -224,13 +263,28 @@ function renderLeaderboard(teams, live) {
     ? (TEAMS.find((t) => t.name === live.champion) || {}).owner
     : null;
 
-  // When the tournament is won, announce the champion above the podium.
+  // --- Finals: build-up spotlight, then the champion celebration -------------
   const banner = $("#banner");
   if (banner) {
-    banner.innerHTML = championOwner
-      ? `🏆 <strong>${championOwner}</strong> wins the draw — ${live.champion} are World Champions!`
-      : "";
-    banner.style.display = championOwner ? "" : "none";
+    const finalFx = (live.fixtures || []).find((f) => f.stage === "final");
+    const tag = (o) => `<span style="color:${OWNER_COLORS[o] || "inherit"}">${o}</span>`;
+    let html = "", cls = "";
+    if (championOwner) {
+      // A — the winner is crowned
+      html = `🏆 <strong>${championOwner}</strong> wins the Family Draw! ${flagFor(live.champion)} ${live.champion} are World Champions!`;
+      cls = "banner-champ";
+    } else if (finalFx && finalFx.home !== "TBD" && finalFx.away !== "TBD" && finalFx.status !== "FINISHED") {
+      // B — the final is set: winner takes the draw
+      const oh = ownerOf(finalFx.home), oa = ownerOf(finalFx.away);
+      html =
+        oh && oa && oh === oa
+          ? `🏆 <strong>THE FINAL:</strong> ${flagFor(finalFx.home)} ${finalFx.home} vs ${flagFor(finalFx.away)} ${finalFx.away} — ${tag(oh)} owns both, the draw is already won!`
+          : `🏆 <strong>THE FINAL:</strong> ${tag(oh)}'s ${flagFor(finalFx.home)} ${finalFx.home} vs ${tag(oa)}'s ${flagFor(finalFx.away)} ${finalFx.away} — winner takes the draw!`;
+      cls = "banner-final";
+    }
+    banner.innerHTML = html;
+    banner.className = "banner" + (cls ? " " + cls : "");
+    banner.style.display = html ? "" : "none";
   }
 
   // --- Where a player's top team currently stands ---
@@ -316,6 +370,10 @@ function ownerBadge(teamName) {
   const t = TEAMS.find((x) => x.name === teamName);
   if (!t) return "";
   return `<span class="who" style="background:${OWNER_COLORS[t.owner]}">${t.owner}</span>`;
+}
+function ownerOf(teamName) {
+  const t = TEAMS.find((x) => x.name === teamName);
+  return t ? t.owner : null;
 }
 function flagFor(teamName) {
   const t = TEAMS.find((x) => x.name === teamName);
@@ -416,5 +474,21 @@ function renderFooter(live) {
   }
 }
 
+// Preview hook for the finals features (before they happen for real):
+//   ?demo=final  → shows the "winner takes the draw" spotlight (Spain vs France)
+//   ?demo=champ  → shows the champion celebration + confetti (Mom / Spain)
+function applyDemo(live) {
+  const mode = new URLSearchParams(location.search).get("demo");
+  if (mode === "champ") {
+    live.champion = "Spain";
+  } else if (mode === "final") {
+    live.champion = null;
+    let ff = (live.fixtures = live.fixtures || []).find((f) => f.stage === "final");
+    if (!ff) { ff = { stage: "final", date: "2026-07-19T19:00:00Z", status: "TIMED" }; live.fixtures.push(ff); }
+    ff.home = "Spain"; ff.away = "France"; ff.status = "TIMED";
+  }
+  return live;
+}
+
 // Go!
-loadLive().then(render);
+loadLive().then(applyDemo).then(render);
