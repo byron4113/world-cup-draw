@@ -114,6 +114,15 @@ main { max-width: 1000px; margin: 0 auto; padding: 0 18px 60px; }
 .podium-card:nth-child(odd) { transform: rotate(-1.2deg); }
 .podium-card:nth-child(even) { transform: rotate(1.2deg); }
 .podium-card.is-champion { border-color: var(--gold); box-shadow: 4px 4px 0 var(--gold); }
+/* a player with no teams left: dimmed card + red OUT stamp */
+.podium-card.is-eliminated { opacity: 0.72; filter: grayscale(0.35); }
+.podium-card.is-eliminated .podium-name { color: #6a6356; text-decoration: line-through; }
+.out-stamp {
+  display: inline-block; margin: 6px 0 2px;
+  font-family: "Anton", sans-serif; font-size: 1.9rem; line-height: 1;
+  color: var(--red); border: 3px solid var(--red); border-radius: 8px;
+  padding: 3px 14px; transform: rotate(-7deg); letter-spacing: 0.06em;
+}
 .podium-rank { font-size: 1.7rem; }
 .podium-name { font-family: "Anton", sans-serif; font-size: 1.5rem; text-transform: uppercase; margin-top: 2px; }
 .podium-alive .big { font-family: "Anton", sans-serif; font-size: 2.8rem; line-height: 1; display: block; margin-top: 6px; }

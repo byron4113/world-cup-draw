@@ -303,13 +303,17 @@ function renderLeaderboard(teams, live) {
     .map((r, i) => {
       const medal = ["🥇", "🥈", "🥉"][i] || "";
       const champ = championOwner === r.owner;
+      const eliminated = !champ && r.alive === 0; // all their teams are gone
+      const aliveBlock = eliminated
+        ? `<span class="out-stamp">OUT</span>`
+        : `<span class="big">${r.alive}</span><span class="lbl">still in</span>`;
       return `
-        <div class="podium-card ${champ ? "is-champion" : ""}" style="--accent:${OWNER_COLORS[r.owner]}">
-          <div class="podium-rank">${champ ? "🏆" : medal}</div>
+        <div class="podium-card ${champ ? "is-champion" : ""} ${eliminated ? "is-eliminated" : ""}" style="--accent:${OWNER_COLORS[r.owner]}">
+          <div class="podium-rank">${champ ? "🏆" : eliminated ? "❌" : medal}</div>
           <div class="podium-name">${r.owner}</div>
-          <div class="podium-alive"><span class="big">${r.alive}</span><span class="lbl">still in</span></div>
-          <div class="podium-meta">of ${r.total} teams</div>
-          <div class="podium-deepest"><span class="top-label">Top team</span>${topLabel(r.top)}</div>
+          <div class="podium-alive">${aliveBlock}</div>
+          <div class="podium-meta">${eliminated ? "all 16 teams knocked out" : "of " + r.total + " teams"}</div>
+          <div class="podium-deepest"><span class="top-label">${eliminated ? "Best run" : "Top team"}</span>${topLabel(r.top)}</div>
         </div>`;
     })
     .join("");
