@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T20:18:49.691Z",
+  "lastUpdated": "2026-07-15T21:16:47.585Z",
   "champion": null,
   "teams": {
     "Mexico": {
@@ -508,7 +508,7 @@
     },
     "Argentina": {
       "status": "alive",
-      "reached": "sf",
+      "reached": "final",
       "group": "J",
       "rank": 1,
       "played": 3,
@@ -619,7 +619,7 @@
       "points": 0
     },
     "England": {
-      "status": "alive",
+      "status": "out",
       "reached": "sf",
       "group": "L",
       "rank": 1,
@@ -1692,9 +1692,9 @@
       "group": null,
       "home": "England",
       "away": "Argentina",
-      "hs": 0,
-      "as": 0,
-      "status": "IN_PLAY"
+      "hs": 1,
+      "as": 2,
+      "status": "FINISHED"
     },
     {
       "date": "2026-07-18T21:00:00Z",
