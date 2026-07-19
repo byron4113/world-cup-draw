@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-19T21:09:02.898Z",
-  "champion": null,
+  "lastUpdated": "2026-07-19T22:10:52.570Z",
+  "champion": "Spain",
   "teams": {
     "Mexico": {
       "status": "out",
@@ -396,7 +396,7 @@
     },
     "Spain": {
       "status": "alive",
-      "reached": "final",
+      "reached": "champion",
       "group": "H",
       "rank": 1,
       "played": 3,
@@ -507,7 +507,7 @@
       "points": 0
     },
     "Argentina": {
-      "status": "alive",
+      "status": "out",
       "reached": "final",
       "group": "J",
       "rank": 1,
@@ -1712,9 +1712,9 @@
       "group": null,
       "home": "Spain",
       "away": "Argentina",
-      "hs": 0,
+      "hs": 1,
       "as": 0,
-      "status": "IN_PLAY"
+      "status": "FINISHED"
     }
   ]
 }
